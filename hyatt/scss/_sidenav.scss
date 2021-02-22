@@ -1,0 +1,76 @@
+#sidenav {
+    >* {
+        transition: all ease 1s;
+    }
+
+    .inner {
+        position: fixed;
+        left: 0px;
+        top: 40%;
+        z-index: 100;
+        opacity: 0.8;
+        padding: 10px;
+
+        ul {
+            li {
+                text-align: left;
+                position: relative;
+                width: 100%;
+                height: 30px;
+
+                a {
+                    display: inline-block;
+                    font: normal 12px/30px 'Arita';
+                    color: #888;
+                    text-align: left;
+                    transition: all ease 0.5s;
+                    height: 30px;
+                    padding-left: 30px;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: inline-block;
+                    background: #c6c6c6;
+                    border-radius: 50px;
+                    width: 13px;
+                    height: 13px;
+                    vertical-align: middle;
+                    transition: all ease 0.5s;
+                    position: absolute;
+                    left: 5px;
+                    top: 7px;
+                    cursor: pointer;
+                }
+
+                &.on {
+                    a {
+                        opacity: 0;
+                    }
+
+                    span {
+                        background: #a3876b;
+                        width: 100%;
+                        height: 13px;
+                        border-radius: 15px;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet) {
+    #sidenav {
+        display: none;
+    }
+}
+
+//mobile
+@media screen and (max-width:$mobile) {
+    #sidenav {
+        display: none;
+    }
+}

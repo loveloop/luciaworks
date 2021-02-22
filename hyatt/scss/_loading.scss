@@ -1,0 +1,166 @@
+.svgWrap  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+ 
+  width: 200px;
+  height: 60px;
+}
+
+.logo-icon-path {
+  stroke: #a3876b;
+  stroke-width: 1;
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+
+
+.first {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+          animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+  stroke-dasharray: 390; 
+  stroke-dashoffset: 390; 
+  fill: #a3876b;
+  fill-opacity: 0;
+}
+
+.middle {
+  -webkit-animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+          animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+  stroke-dasharray: 1260; 
+  stroke-dashoffset: 1260; 
+  fill: #a3876b;
+  fill-opacity: 0;
+}
+
+.last {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+          animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+  stroke-dasharray: 250; 
+  stroke-dashoffset: 250; 
+  fill: #a3876b;
+  fill-opacity: 0;
+}
+
+
+@-webkit-keyframes fillOpacity {
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fillOpacity {
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0; 
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0; 
+  }
+}
+
+#loading {
+
+  z-index: 99999999;
+  display: block;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: #292929;
+  width: 100%;
+  height: 100%;
+
+  .svgWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 60px;
+  }
+
+  .logo-icon-path {
+    stroke: #a3876b;
+    stroke-width: 1;
+    fill: none;
+    stroke-miterlimit: 10;
+  }
+
+
+
+  .first {
+    -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    stroke-dasharray: 390;
+    stroke-dashoffset: 390;
+    fill: #a3876b;
+    fill-opacity: 0;
+  }
+
+  .middle {
+    -webkit-animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    stroke-dasharray: 1245;
+    stroke-dashoffset: 1245;
+    fill: #a3876b;
+    fill-opacity: 0;
+  }
+
+  .last {
+    -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    fill: #a3876b;
+    fill-opacity: 0;
+  }
+
+
+  @-webkit-keyframes fillOpacity {
+    100% {
+      fill-opacity: 1;
+    }
+  }
+
+  @keyframes fillOpacity {
+    100% {
+      fill-opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+}
+
+
+
+
+//tablet
+@media screen and (max-width:$tablet) {}
+
+//mobile
+@media screen and (max-width:$mobile) {}
