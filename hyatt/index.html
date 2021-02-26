@@ -16,9 +16,7 @@
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- webfont -->
     <link rel="stylesheet" href="icon/fontello-embedded.css">
@@ -49,8 +47,7 @@
         <div class="bgGnb"></div>
         <div class="inner">
             <h1 class="logo"><a href="index.html"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
-
-            <ul id="user_area">
+            <ul class="user_area">
                 <li><a href="https://world.hyatt.com/content/gp/ko/home.html" target="_blank">하얏트월드</a></li>
                 <li><a href="#"><i class="b-icon b-icon-search"></i><span class="blind">검색</span></a></li>
                 <li><a href="#"><i class="b-icon b-icon-globe"></i><span class="blind">언어선택</span></a>
@@ -76,7 +73,6 @@
                     </ul>
                 </li>
             </ul>
-
             <nav>
                 <ul id="nav">
                     <li>
@@ -130,16 +126,105 @@
                         </ul>
                     </li>
                 </ul>
-                <div id="quickBtn">
+                <div class="quickBtn">
                     <a href="#void">지금 예약하기</a>
                 </div>
             </nav>
         </div>
     </div>
+
+    <!-- mobile menu -->
+    <div class="mgnbLogo">
+        <h1 class="logo"><a href="index.html"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
+    </div>
+    <div id='h_menu'>
+        <div class="hamburger" id="hamburger-1">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      
+      <div id="mgnb">
+        <ul class="user_area">
+            <li><a href="https://world.hyatt.com/content/gp/ko/home.html" target="_blank">하얏트월드</a></li>
+            <li><a href="#"><i class="b-icon b-icon-search"></i><span class="blind">검색</span></a></li>
+            <li><a href="#"><i class="b-icon b-icon-globe"></i><span class="blind">언어선택</span></a>
+                <ul class="langBox">
+                    <li class="eng"><a href="#void">English</a></li>
+                    <li class="deu"><a href="#void">Deutsch</a></li>
+                    <li class="esp"><a href="#void">Español</a></li>
+                    <li class="fra"><a href="#void">Français</a></li>
+                    <li class="jap"><a href="#void">日本語</a></li>
+                    <li class="kor"><a href="#void">한국어</a></li>
+                    <li class="por"><a href="#void">Português</a></li>
+                    <li class="pyc"><a href="#void">Русский</a></li>
+                    <li class="chi1"><a href="#void">简体中文</a></li>
+                    <li class="chi2"><a href="#void">繁體中文</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+        <div class="hamNav">
+            <ul>
+                    <li>
+                        <a href="#void">HOTEL</a>
+                        <ul>
+                            <li><a href="company.html">호텔소개</a></li>
+                            <li><a href="#void">위치</a></li>
+                            <li><a href="#void">주요명소</a></li>
+                            <li><a href="board.html">뉴스</a></li>
+                            <li><a href="#void">갤러리&리뷰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#void">ROOMS</a>
+                        <ul>
+                            <li><a href="#void">스위트룸</a></li>
+                            <li><a href="#void">프리미엄</a></li>
+                            <li><a href="#void">스탠다드</a></li>
+                            <li><a href="#void">디럭스</a></li>
+                            <li><a href="#void">클럽이용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">DINING</a>
+                        <ul>
+                            <li><a href="#void">로비 라운지</a></li>
+                            <li><a href="#void">테라스</a></li>
+                            <li><a href="#void">322소월로</a></li>
+                            <li><a href="#void">델리&middot;부티크</a></li>
+                            <li><a href="#void">룸서비스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SPECIAL</a>
+                        <ul>
+                            <li><a href="#void">호텔웨딩</a></li>
+                            <li><a href="#void">컨벤션</a></li>
+                            <li><a href="#void">케이터링</a></li>
+                            <li><a href="#void">야외행사</a></li>
+                            <li><a href="#void">프라이빗</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">OFFERS</a>
+                        <ul>
+                            <li><a href="#void">설연휴 한정</a></li>
+                            <li><a href="#void">WINTER ON ICE</a></li>
+                            <li><a href="#void">Romantic Escape</a></li>
+                            <li><a href="#void">Suite Luxury</a></li>
+                            <li><a href="#void">Work from Hyatt</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+
+        </div>
+      </div>
+
     <!-- container -->
-
     <div id="container">
-
         <!-- main visual -->
         <section id="visual" class="page">
             <h2 class="blind">INTRO</h2>
@@ -149,67 +234,43 @@
                 <div class="textShow inner">
                     <div class="slideWrap">
                         <p class="pTit animatedFadeInUp fadeInUp">당신의 일상을 가장 감동스러운 순간으로 디자인합니다.</p>
-                        <p class="sTxt animatedFadeInUp fadeInUp">서울의 상징인 남산과 한강을 가까이 즐길 수 있는 그랜드 하얏트 서울 호텔에서 도심
-                            어디든지
-                            편안하게
-                            여행하십시오.</p>
+                        <p class="sTxt animatedFadeInUp fadeInUp">서울의 상징인 남산과 한강을 가까이 즐길 수 있는 그랜드 하얏트 서울 호텔에서 도심 어디든지 편안하게 여행하십시오.</p>
                     </div>
                 </div>
-
                 <ul id="infoWrap">
                     <li>
                         <div class="front">
-                            <div class="pic"><img src="images/HYCOM-092520-GBAC-Star-Seal.4x3.png"
-                                    alt="GBAC star facility">
-                            </div>
+                            <div class="pic"><img src="images/HYCOM-092520-GBAC-Star-Seal.4x3.png" alt="GBAC star facility"></div>
                             <h4>NOTICE</h4>
                             <p>케어를 위한 하얏트의 약속</p>
                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                         </div>
-
                         <div class="back">
                             <a href="#" class="close"> <i class="b-icon b-icon-close"></i></a>
                             <div class="boxWrap">
-
                                 <div class="textBox">
                                     <p class="pTit">안전과 웰빙을 언제나 최우선으로</p>
                                     <p class="pTxt">
-                                        저희 호텔은 모든 고객과 직원의 건강과 안전을 최우선으로 생각합니다. 코로나19의 예방 대책을 위해 호텔 출입은 로비 입구로 제한되며
-                                        일부
-                                        레스토랑
-                                        서비스가
-                                        변경되었음을 알려드립니다. 정부 지침에 따라 호텔의 실내 및 야외 공간에서 마스크 착용은 필수이며, 미착용 시 호텔 이용에 제한이 있을
-                                        수
-                                        있음을
-                                        알려드립니다. 추가 문의 사항은 이곳을 클릭하시거나 호텔로 문의 부탁드립니다. 또한, 여기를 통해 저희 호텔이 고객님께 안전한 환경을
-                                        제공하고자
-                                        어떠한
-                                        노력을
-                                        하고 있는지 확인하실 수 있습니다.
+                                        저희 호텔은 모든 고객과 직원의 건강과 안전을 최우선으로 생각합니다. 코로나19의 예방 대책을 위해 호텔 출입은 로비 입구로 제한되며 일부 레스토랑 서비스가 변경되었음을 알려드립니다. 정부 지침에 따라 호텔의 실내 및 야외 공간에서 마스크 착용은 필수이며, 미착용 시 호텔 이용에 제한이 있을 수 있음을 알려드립니다. 추가 문의 사항은 이곳을 클릭하시거나 호텔로 문의 부탁드립니다. 또한, 여기를 통해 저희 호텔이 고객님께 안전한 환경을 제공하고자 어떠한
+                                        노력을 하고 있는지 확인하실 수 있습니다.
                                         <strong>* 안내 - 정부에서 진행하는 ‘대한민국 숙박대전’과 관련된 최적가 보장 클레임은 적용되지 않습니다.</strong>
                                         <strong>* 마스크 - 실내 공용 구역 및 실외 주변 구역 이동 시 착용 필수.</strong>
                                     </p>
-
-                                    <a class="btn_more"
-                                        href="https://www.hyatt.com/ko-KR/info/coronavirus-statement?icamp=woh_cvstatement_jan2020_alertbanner_ko"
-                                        target="_blank">자세히 보기</a>
+                                    <a class="btn_more" href="https://www.hyatt.com/ko-KR/info/coronavirus-statement?icamp=woh_cvstatement_jan2020_alertbanner_ko" target="_blank">자세히 보기</a>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div class="front">
-                            <div class="pic"><img src="images/gift.png" alt=""></div>
+                            <div class="pic"><img src="images/gift.png" alt="편의시설 선물 이미지"></div>
                             <h4>AMENITIES</h4>
                             <p>편의시설 및 부가혜택</p>
                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                         </div>
-
                         <div class="back">
                             <a href="#" class="close"><i class="b-icon b-icon-close"></i></a>
                             <div class="boxWrap">
-
                                 <ul>
                                     <li><i class="b-icon b-icon_size-x7 b-icon-FREE_INTERNET"></i>
                                         <p>무료 인터넷 액세스</p>
@@ -248,15 +309,13 @@
                                         <p>미팅 시설</p>
                                     </li>
                                 </ul>
-                                <a class="btn_more"
-                                    href="https://www.hyatt.com/ko-KR/info/coronavirus-statement?icamp=woh_cvstatement_jan2020_alertbanner_ko"
-                                    target="_blank">자세히 보기</a>
+                                <a class="btn_more" href="https://www.hyatt.com/ko-KR/info/coronavirus-statement?icamp=woh_cvstatement_jan2020_alertbanner_ko" target="_blank">자세히 보기</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="front">
-                            <div class="pic"><img src="images/photo2.svg" alt=""></div>
+                            <div class="pic"><img src="images/photo2.svg" alt="리뷰 이미지"></div>
                             <h4>REVIEW</h4>
                             <p>그랜드 하얏트에서의 추억을 공유해 주십시오.</p>
                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
@@ -274,9 +333,7 @@
                                     </p>
                                     <p class="pTit">"그랜드 하얏트 서울 방문 후기"</p>
                                     <p class="pTxt">
-                                        1년에 2-3번씩 방문하고있는데 계절마다 느낌이 달라서 좋아요 접근성도 좋고 가격대비 훌륭해요 아이스링크장 입장은 처음하였는데 뷰도 좋고
-                                        관리도
-                                        잘되있었어요
+                                        1년에 2-3번씩 방문하고있는데 계절마다 느낌이 달라서 좋아요 접근성도 좋고 가격대비 훌륭해요 아이스링크장 입장은 처음하였는데 뷰도 좋고 관리도 잘되있었어요
                                     </p>
                                     <div class="uInfo">
                                         <span>3 days ago</span>
@@ -294,11 +351,7 @@
                                     </p>
                                     <p class="pTit">"A truly great hotel"</p>
                                     <p class="pTxt">
-                                        A great hotel, and very well run. The General Manager, Alistair, is most
-                                        helpful,
-                                        and the hotel staff operate effectively in a CoVid19 safe manner. A most
-                                        enjoyable
-                                        stay and highly recommended! I would gladly stay here again.
+                                        A great hotel, and very well run. The General Manager, Alistair, is most helpful, and the hotel staff operate effectively in a CoVid19 safe manner. A most enjoyable stay and highly recommended! I would gladly stay here again.
                                     </p>
                                     <div class="uInfo">
                                         <span>10 days ago</span>
@@ -324,22 +377,17 @@
                                         <span>Couples</span>
                                     </div>
                                 </div>
-
-
-                                <a class="btn_more"
-                                    href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/photos-reviews"
-                                    target="_blank">전체보기</a>
+                                <a class="btn_more" href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/photos-reviews" target="_blank">전체보기</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="front">
-                            <div class="pic"><img src="images/app.png" alt=""></div>
+                            <div class="pic"><img src="images/app.png" alt="하얏트 모바일 앱 이미지"></div>
                             <h4>APP</h4>
                             <p>하얏트월드 모바일 앱 다운</p>
                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                         </div>
-
                         <div class="back">
                             <a href="#" class="close"><i class="b-icon b-icon-close"></i></a>
                             <div class="boxWrap">
@@ -351,27 +399,17 @@
                                         앱을
                                         이용하시면 탭 한 번만으로 저희 그랜드 하얏트 서울의 디지털 부가 혜택을 이용하실 수 있습니다.
                                     </p>
-
-
                                 </div>
                                 <div class="app">
-                                    <a href="https://apps.apple.com/app/apple-store/id476639005?mt=8"
-                                        target="_blank"><img src="images/ios.png" alt="AppStore에서 다운로드 하기"></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.Hyatt.hyt&referrer=utm_source%3DPropertySite%26utm_medium%3DHCOM%26utm_campaign%3DAppAmenitiesBanner%26anid%3Dadmob"
-                                        target="_blank"><img src="images/play.png" alt="Google Play에서 다운로드 하기"></a>
+                                    <a href="https://apps.apple.com/app/apple-store/id476639005?mt=8" target="_blank"><img src="images/ios.png" alt="AppStore에서 다운로드 하기"></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.Hyatt.hyt&referrer=utm_source%3DPropertySite%26utm_medium%3DHCOM%26utm_campaign%3DAppAmenitiesBanner%26anid%3Dadmob" target="_blank"><img src="images/play.png" alt="Google Play에서 다운로드 하기"></a>
                                 </div>
-
-                                <a class="btn_more" href="https://world.hyatt.com/content/gp/ko/rewards/mobile.html"
-                                    target="_blank">자세히보기</a>
-
+                                <a class="btn_more" href="https://world.hyatt.com/content/gp/ko/rewards/mobile.html" target="_blank">자세히보기</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-
-
-
         </section>
 
         <!-- about : 호텔소개 -->
@@ -386,104 +424,76 @@
                             <li class="active">
                                 <div class="photo">
                                     <img src="images/about1.jpg" alt="322 소월로">
-
                                     <div class="textBox">
                                         <p class="tit">322 소월로</p>
                                         <div class="sText">
                                             <p>
-                                                코끝을 자극하는 맛있는 향기와 이야기가 새어나오는 골목. 4개의 각기 다른 레스토랑이 자리한 그랜드 하얏트 서울 내 작은 골목
-                                                322
-                                                소월로에서 당신만의 맛있는 이야기를 만들어보십시오. 스테이크 하우스, 테판, 카우리, 텐카이 레스토랑이 당신을 위한 무대가
-                                                되어드립니다.
+                                                코끝을 자극하는 맛있는 향기와 이야기가 새어나오는 골목. 4개의 각기 다른 레스토랑이 자리한 그랜드 하얏트 서울 내 작은 골목 322 소월로에서 당신만의 맛있는 이야기를 만들어보십시오. 스테이크 하우스, 테판, 카우리, 텐카이 레스토랑이 당신을 위한 무대가 되어드립니다.<br><br>
                                                 <span class="info">지하 1층</span>
                                             </p>
                                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="photo">
                                     <img src="images/about2.jpg" alt="클럽 올림퍼스">
-
                                     <div class="textBox">
                                         <p class="tit">클럽 올림퍼스</p>
                                         <div class="sText">
                                             <p>
-                                                회원 및 투숙객의 전용 공간인 그랜드 하얏트 서울의 피트니스&스파 센터를 방문해보십시오. 24시간 이용 가능한 피트니스 시설과
-                                                사우나,
-                                                실내 수영장, 유아용 수영장과 월풀을 포함한 야외 수영장, 스쿼시 코트, 테니스 코트, 에어로빅 룸이 구비되어
-                                                있습니다.<br><br>
-
+                                                회원 및 투숙객의 전용 공간인 그랜드 하얏트 서울의 피트니스&스파 센터를 방문해보십시오. 24시간 이용 가능한 피트니스 시설과 사우나, 실내 수영장, 유아용 수영장과 월풀을 포함한 야외 수영장, 스쿼시 코트, 테니스 코트, 에어로빅 룸이 구비되어 있습니다.<br><br>
                                                 <span class="info">가든 레벨 층</span>
                                             </p>
                                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="photo">
                                     <img src="images/about3.jpg" alt="아이스링크">
-
                                     <div class="textBox">
                                         <p class="tit">아이스링크</p>
                                         <div class="sText">
                                             <p>
-                                                아름다운 서울의 야경을 배경으로 수천 개의 꼬마전구가 반짝이는 아이스링크는 가족 및 연인과 함께 겨울 야외 활동을 즐길 수 있는
-                                                서울의
-                                                명소입니다. 아이스링크에서 아이스 스케이팅과 스낵바도 즐기고, 어린이들을 위한 생일파티 패키지와 커플을 위한 로맨스 온 아이스
-                                                패키지도
-                                                이용해보세요.
+                                                아름다운 서울의 야경을 배경으로 수천 개의 꼬마전구가 반짝이는 아이스링크는 가족 및 연인과 함께 겨울 야외 활동을 즐길 수 있는 서울의 명소입니다. 아이스링크에서 아이스 스케이팅과 스낵바도 즐기고, 어린이들을 위한 생일파티 패키지와 커플을 위한 로맨스 온 아이스 패키지도 이용해보세요.
                                                 <span class="info">가든 레벨 층 | 매일 I 정오 – 9 PM</span>
                                             </p>
                                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="photo">
                                     <img src="images/about4.jpg" alt="더 스파 by 그랜드 하얏트 서울">
-
                                     <div class="textBox">
                                         <p class="tit">더 스파 by 그랜드 하얏트 서울</p>
                                         <div class="sText">
                                             <p>
-                                                바쁘게 움직이는 도심 가운데서 찾아보는 고요함. 유럽의 정원을 연상시키는 보테니컬 콘셉트의 9개의 스파 스위트에서 평온한 시간을
-                                                계획해보세요.
+                                                바쁘게 움직이는 도심 가운데서 찾아보는 고요함. 유럽의 정원을 연상시키는 보테니컬 콘셉트의 9개의 스파 스위트에서 평온한 시간을 계획해보세요.
                                                 <span class="info">가든 레벨 층</span>
                                             </p>
                                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="photo">
                                     <img src="images/about5.jpg" alt="비즈니스 센터">
-
                                     <div class="textBox">
                                         <p class="tit">비즈니스 센터</p>
                                         <div class="sText">
                                             <p>
-
-
-                                                현대적인 디자인이 돋보이는 10개의 소규모 미팅룸을 겸비한 비즈니스 센터는 바쁜 비즈니스맨의 효율적이고 빠른 업무를 위한 세심한
-                                                서비스를
-                                                제공합니다.<br><br>
-                                                *비즈니스 센터는 코로나19의 예방 및 확산 방지를 위해 운영이 일시 중단됩니다. 해당 기간 동안에는 기존 미리 예약하신
-                                                고객님들에 한해
-                                                이용 가능하시며, PC 부스의 경우 24시간 자율 운영됩니다.
+                                                현대적인 디자인이 돋보이는 10개의 소규모 미팅룸을 겸비한 비즈니스 센터는 바쁜 비즈니스맨의 효율적이고 빠른 업무를 위한 세심한 서비스를 제공합니다.<br><br>
+                                                
                                                 <span class="info">2층 | 02-799-8154</span>
                                             </p>
                                             <a href="#" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
@@ -500,12 +510,9 @@
                             <li><a href="#">5</a></li>
                         </ul>
                     </div>
-
                 </div>
                 <a class="btn_more" href="#">더보기</a>
             </div>
-
-
         </section>
 
         <!-- rooms : 객실 -->
@@ -522,20 +529,15 @@
                                 <div class="textBox">
                                     <div class="sText animatedFadeInUp fadeInUp">
                                         <p>
-                                            그랜드 하얏트 서울은 53실의 스위트를 포함한 615실의 객실을 통해 한국의 고유한 문화에서 영감을 받아 재해석한 모던한 객실
-                                            모티브들로
-                                            투숙 고객의 안락함을 제공하는데 가치를 두고 있습니다. 객실 어느곳에든지 파노라믹한 도심 전망을 편안하게 즐길 수 있도록 배려한
-                                            새로운
-                                            객실 및 스위트에서 시대를 아우르는 편안한 서비스와 섬세한 배려가 느껴지는 세련된 품격을 경험해보시기 바랍니다.
+                                            그랜드 하얏트 서울은 53실의 스위트를 포함한 615실의 객실을 통해 한국의 고유한 문화에서 영감을 받아 재해석한 모던한 객실 모티브들로 투숙 고객의 안락함을 제공하는데 가치를 두고 있습니다. 객실 어느곳에든지 파노라믹한 도심 전망을 편안하게 즐길 수 있도록 배려한 새로운 객실 및 스위트에서 시대를 아우르는 편안한 서비스와 섬세한 배려가 느껴지는 세련된 품격을 경험해보시기 바랍니다.
                                         </p>
-                                        <a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/rooms"
-                                            class="open more"><span>+</span><em>VIEW DETAIL</em></a>
+                                        <a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/rooms" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                     </div>
                                     <div class="img animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-suites2.jpg" alt="">
+                                        <img src="images/gallery-suites2.jpg" alt="스위트&객실 이미지">
                                     </div>
                                     <div class="img2 animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-hotel2.jpg" alt="">
+                                        <img src="images/gallery-hotel2.jpg" alt="스위트&객실 이미지">
                                     </div>
                                 </div>
                             </div>
@@ -549,21 +551,19 @@
                                 <div class="textBox">
                                     <div class="sText animatedFadeInUp fadeInUp">
                                         <p>
-                                            서울의 명소로 제각기 이름난 그랜드 하얏트 서울 호텔의 11개의 레스토랑과 바에서 다양한 요리와 와인, 칵테일 등을 즐겨보시기
-                                            바랍니다.
+                                            서울의 명소로 제각기 이름난 그랜드 하얏트 서울 호텔의 11개의 레스토랑과 바에서 다양한 요리와 와인, 칵테일 등을 즐겨보시기 바랍니다.
                                             <br><br>
                                             다이닝 업장 이용 시 QR코드 전자출입명부 확인 절차를 거쳐 입장이 가능함을 안내드립니다.
                                             <br><br>
                                             * 안내 - 정부 지침에 따라 2021년 2월 14일까지 호텔 내 5인 이상 집합이 제한됩니다.
                                         </p>
-                                        <a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/dining"
-                                            class="open more"><span>+</span><em>VIEW DETAIL</em></a>
+                                        <a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/dining" class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                     </div>
                                     <div class="img animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-dining5.jpg" alt="">
+                                        <img src="images/gallery-dining5.jpg" alt="다이닝 이미지">
                                     </div>
                                     <div class="img2 animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-dining6.jpg" alt="">
+                                        <img src="images/gallery-dining6.jpg" alt="다이닝 이미지">
                                     </div>
                                 </div>
                             </div>
@@ -577,11 +577,7 @@
                                 <div class="textBox">
                                     <div class="sText animatedFadeInUp fadeInUp">
                                         <p>
-                                            서울 중심에 위치한 그랜드 하얏트 서울은 서울에서 가장 큰 대형 볼룸과 다양한 크기의 미팅룸 그리고 야외 행사 장소를 갖추고
-                                            있습니다.
-                                            현대적인 감각의 디자인과 첨단 시설은 물론, 남산부터 한강에 이르기까지 도시의 가장 아름다운 풍광을 자랑하는 그랜드 하얏트
-                                            서울에서
-                                            성공적인 행사를 계획해 보시기 바랍니다.
+                                            서울 중심에 위치한 그랜드 하얏트 서울은 서울에서 가장 큰 대형 볼룸과 다양한 크기의 미팅룸 그리고 야외 행사 장소를 갖추고 있습니다. 현대적인 감각의 디자인과 첨단 시설은 물론, 남산부터 한강에 이르기까지 도시의 가장 아름다운 풍광을 자랑하는 그랜드 하얏트 서울에서 성공적인 행사를 계획해 보시기 바랍니다.
                                             <br><br>
                                             * 안내 - 모든 연회장 방문시, QR코드 전자출입명부 확인 절차를 거쳐 입장이 가능함을 안내드립니다.
                                         </p>
@@ -589,10 +585,10 @@
                                             class="open more"><span>+</span><em>VIEW DETAIL</em></a>
                                     </div>
                                     <div class="img animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-meeting2.jpg" alt="">
+                                        <img src="images/gallery-meeting2.jpg" alt="컨벤션&웨딩 이미지">
                                     </div>
                                     <div class="img2 animatedFadeInUp fadeInUp">
-                                        <img src="images/gallery-wedding1.jpg" alt="">
+                                        <img src="images/gallery-wedding1.jpg" alt="컨벤션&웨딩 이미지">
                                     </div>
                                 </div>
                             </div>
@@ -606,11 +602,7 @@
                                 <div class="textBox">
                                     <div class="sText animatedFadeInUp fadeInUp">
                                         <p>
-                                            설 연휴를 맞아 국내 하얏트 호텔에서 제공하는 객실 할인 혜택을 경험해 보세요.
-
-                                            서울, 인천, 부산 그리고 제주에 위치한 6개 하얏트 호텔에서2021년 2월 1일부터 2월 14일까지 2021년 6월 30일까지의
-                                            투숙을
-                                            예약하시면 일일 요금에서 최대 25%까지 할인 받으실 수 있습니다.
+                                            설 연휴를 맞아 국내 하얏트 호텔에서 제공하는 객실 할인 혜택을 경험해 보세요. 서울, 인천, 부산 그리고 제주에 위치한 6개 하얏트 호텔에서2021년 2월 1일부터 2월 14일까지 2021년 6월 30일까지의 투숙을 예약하시면 일일 요금에서 최대 25%까지 할인 받으실 수 있습니다.
                                             <br><br>
                                             * 안내 - 모든 연회장 방문시, QR코드 전자출입명부 확인 절차를 거쳐 입장이 가능함을 안내드립니다.
                                         </p>
@@ -627,7 +619,6 @@
                             </div>
                         </dd>
                     </dl>
-
                 </div>
             </div>
         </section>
@@ -649,85 +640,69 @@
                 </ul>
                 <div class="item_wrap">
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel1.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel1.jpg" alt="갤러리 - 호텔이미지"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites1.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites1.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item dining">
                         <div class=""><a class="pic" href="#"><img src="images/gallery-dining1.jpg" alt="갤러리 - 다이닝"></a>
                         </div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities1.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities1.jpg" alt="갤러리 - activities"></a></div>
                     </div>
 
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel2.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel2.jpg" alt="갤러리 - 호텔이미지"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding1.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding1.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites2.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites2.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item dining">
                         <div class=""><a class="pic" href="#"><img src="images/gallery-dining2.jpg" alt="갤러리 - 다이닝"></a>
                         </div>
                     </div>
                     <div class="item meetings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting2.jpg"
-                                    alt="갤러리 - meetings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting2.jpg" alt="갤러리 - meetings"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding2.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding2.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item dining">
                         <div class=""><a class="pic" href="#"><img src="images/gallery-dining3.jpg" alt="갤러리 - 다이닝"></a>
                         </div>
                     </div>
                     <div class="item meetings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting3.jpg"
-                                    alt="갤러리 - meetings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting3.jpg" alt="갤러리 - meetings"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding3.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding3.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item dining">
                         <div class=""><a class="pic" href="#"><img src="images/gallery-dining4.jpg" alt="갤러리 - 다이닝"></a>
                         </div>
                     </div>
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel3.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel3.jpg" alt="갤러리 - 호텔이미지"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites3.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites3.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites4.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites4.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites5.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites5.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites6.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites6.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item suites">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites6.jpg"
-                                    alt="갤러리 - suites"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-suites6.jpg" alt="갤러리 - suites"></a></div>
                     </div>
                     <div class="item dining">
                         <div class=""><a class="pic" href="#"><img src="images/gallery-dining5.jpg" alt="갤러리 - 다이닝"></a>
@@ -746,73 +721,55 @@
                         </div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities2.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities2.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities3.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities3.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities4.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities4.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities5.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities5.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities6.jpg"
-                                    alt="갤러리 - activities"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities6.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item activities">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities7.jpg"
-                                    alt="갤러리 - activities"></a></div>
-                    </div>
-
-                    <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel4.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-activities7.jpg" alt="갤러리 - activities"></a></div>
                     </div>
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel5.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel4.jpg" alt="갤러리 - 호텔이미지"></a></div>
                     </div>
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel6.jpg"
-                                    alt="갤러리 - 호텔이미지"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel5.jpg" alt="갤러리 - 호텔이미지"></a></div>
+                    </div>
+                    <div class="item hotel">
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel6.jpg" alt="갤러리 - 호텔이미지"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding4.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding4.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding5.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding5.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding6.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding6.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item wedings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding7.jpg"
-                                    alt="갤러리 - wedings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-wedding7.jpg" alt="갤러리 - wedings"></a></div>
                     </div>
                     <div class="item meetings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting4.jpg"
-                                    alt="갤러리 - meetings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting4.jpg" alt="갤러리 - meetings"></a></div>
                     </div>
                     <div class="item meetings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting5.jpg"
-                                    alt="갤러리 - meetings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting5.jpg" alt="갤러리 - meetings"></a></div>
                     </div>
                     <div class="item meetings">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting6.jpg"
-                                    alt="갤러리 - meetings"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-meeting6.jpg" alt="갤러리 - meetings"></a></div>
                     </div>
                     <div class="item hotel">
-                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel7.jpg"
-                                    alt="갤러리 - hotel"></a></div>
+                        <div class=""><a class="pic" href="#"><img src="images/gallery-hotel7.jpg" alt="갤러리 - hotel"></a></div>
                     </div>
                 </div>
                 <a class="btn_more" href="#">더보기</a>
@@ -848,21 +805,18 @@
                             <li><a href="#void"><img src="images/brandBnr17.jpg" alt="브랜드 배너"></a></li>
                             <li><a href="#void"><img src="images/brandBnr18.jpg" alt="브랜드 배너"></a></li>
                             <li><a href="#void"><img src="images/brandBnr19.jpg" alt="브랜드 배너"></a></li>
-
                         </ul>
-
                     </div>
                 </div>
             </div>
             <div class="locaDetail">
                 <div class="inner">
-
                     <div class="left">
                         <h3><span class="s1">오시는 길</span></h3>
                         <h4>그랜드 하얏트 서울</h4>
                         <strong><i class="b-icon b-icon-pin"></i>서울시 용산구 소월로 322, 서울, 대한민국, 04347</strong>
                         <div class="contact">
-                            <p><span>TEL</span>+82 2 797 1234</p>
+                            <p><a href="tel:+82 2 797 1234"><span>TEL</span>+82 2 797 1234</a></p>
                             <p><span>FAX</span>+82 2 798 6953</p>
                             <p><a href="mailto:seoul.grand@hyatt.com">seoul.grand@hyatt.com</a></p>
                         </div>
@@ -873,18 +827,14 @@
                             <a href="#">고객서비스</a>
                         </div>
                     </div>
-
                     <div class="right">
                         <div class="pic">
                             <div class="googleMap" id="map_api">
                                 <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
     </div>
@@ -924,10 +874,8 @@
                     </div>
                 </div>
                 <div class="app">
-                    <a href="https://apps.apple.com/app/apple-store/id476639005?mt=8" target="_blank"><img
-                            src="images/ios.png" alt="AppStore에서 다운로드 하기"></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.Hyatt.hyt&referrer=utm_source%3DPropertySite%26utm_medium%3DHCOM%26utm_campaign%3DAppAmenitiesBanner%26anid%3Dadmob"
-                        target="_blank"><img src="images/play.png" alt="Google Play에서 다운로드 하기"></a>
+                    <a href="https://apps.apple.com/app/apple-store/id476639005?mt=8" target="_blank"><img src="images/ios.png" alt="AppStore에서 다운로드 하기"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.Hyatt.hyt&referrer=utm_source%3DPropertySite%26utm_medium%3DHCOM%26utm_campaign%3DAppAmenitiesBanner%26anid%3Dadmob" target="_blank"><img src="images/play.png" alt="Google Play에서 다운로드 하기"></a>
                 </div>
                 <div class="sns">
                     <ul>
@@ -954,48 +902,44 @@
     </footer>
     <aside class="footFix">
         <ul class="fixedMenu">
-
-            <li><a href="#void"><i class="b-icon b-icon-bell"></i></a></li>
-            <li><a href="#void"><i class="b-icon b-icon-calendar"></i></a></li>
-            <li><a href="https://pf.kakao.com/_PxnxbxgC/chat"><i class="b-icon b-icon-contact"></i></a>
-            </li>
             <li><a href="join.html"><i class="b-icon b-icon-person"></i></a></li>
-
-            <li class="goTop"><a href="#void"><i class="icon-up"><span class="blind">go to top</span></i></a></li>
+            <li class="mapBtn"><a href="#void"><i class="b-icon b-icon-pin"></i></a></li>
+            
+            <li><a href="http://pf.kakao.com/_dymYV" target="_blank"><i class="b-icon b-icon-contact"></i></a>
+            </li>
+            <li><a href="tel:+82 2 797 1234"><i class="b-icon b-icon-telephone"></i></a></li>
+            
+            <li class="booknow"><a href="join.html">예약</a></li>            
         </ul>
+        <div class="goTop"><a href="#void"><i class="icon-up"><span class="blind">go to top</span></i></a></div>
     </aside>
 
     <!-- loading -->
     <div id="loading" >        
-            <div class="logo-icon-path svgWrap">  
-                <svg viewBox="0 0 365 96.19"><title>hyatt</title>                    
-                    <polygon class="logo-icon-path first" points="9.67 37.85 9.67 73.66 0 73.66 0 2.04 9.67 2.04 9.67 30.85 49.02 30.85 49.02 2.04 58.68 2.04 58.68 73.66 49.02 73.66 49.02 37.85 9.67 37.85"/>
+        <div class="logo-icon-path svgWrap">  
+            <svg viewBox="0 0 365 96.19"><title>hyatt</title>                    
+                <polygon class="logo-icon-path first" points="9.67 37.85 9.67 73.66 0 73.66 0 2.04 9.67 2.04 9.67 30.85 49.02 30.85 49.02 2.04 58.68 2.04 58.68 73.66 49.02 73.66 49.02 37.85 9.67 37.85"/>
                     
-                    <path class="logo-icon-path middle" d="M238,266c10-.39,38.24-.57,38.24-.57l13.19,32.63h10.67l-13.65-32.25A341.25,341.25,0,0,1,325,271.6l12.43,2.84A317.21,317.21,0,0,1,398,296.15c-12.26-13.35-47-25.5-63.74-30.78V210.72h21.18v-6.78H303.16v6.78h21.4V262.5a278.82,278.82,0,0,0-42.51-7l-22.63-53.45-3.94-.19-22.19,53.3A301,301,0,0,0,191.51,261l-1.38.36V244.55l25.31-40.61h-9.57l-20.43,33.61-21.58-33.61H153.12l27.34,41.3v18.84c-19.39,5.62-58.73,18.31-71.59,32.07,32.73-16,82.64-26.11,82.64-26.11a352.87,352.87,0,0,1,37.56-4.7L215.44,298.1h10ZM242.27,255l14.56-37.39L272,255Z" transform="translate(-67.5 -201.9)"/>
+                <path class="logo-icon-path middle" d="M238,266c10-.39,38.24-.57,38.24-.57l13.19,32.63h10.67l-13.65-32.25A341.25,341.25,0,0,1,325,271.6l12.43,2.84A317.21,317.21,0,0,1,398,296.15c-12.26-13.35-47-25.5-63.74-30.78V210.72h21.18v-6.78H303.16v6.78h21.4V262.5a278.82,278.82,0,0,0-42.51-7l-22.63-53.45-3.94-.19-22.19,53.3A301,301,0,0,0,191.51,261l-1.38.36V244.55l25.31-40.61h-9.57l-20.43,33.61-21.58-33.61H153.12l27.34,41.3v18.84c-19.39,5.62-58.73,18.31-71.59,32.07,32.73-16,82.64-26.11,82.64-26.11a352.87,352.87,0,0,1,37.56-4.7L215.44,298.1h10ZM242.27,255l14.56-37.39L272,255Z" transform="translate(-67.5 -201.9)"/>
                     
-                    <polygon class="logo-icon-path last" points="343.82 73.66 334.16 73.66 334.16 8.81 312.75 8.81 312.75 2.04 365 2.04 365 8.81 343.82 8.81 343.82 73.66"/></svg>
-            </div>       
+                <polygon class="logo-icon-path last" points="343.82 73.66 334.16 73.66 334.16 8.81 312.75 8.81 312.75 2.04 365 2.04 365 8.81 343.82 8.81 343.82 73.66"/>
+            </svg>
+        </div>       
     </div>
     
     <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
-        integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
-        crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
 
     <script src="lib/js/isotope.pkgd.min.js"></script>
     <script src="lib/js/masonry.pkgd.min.js"></script>
 
     <script type="text/javascript" src="js/google-map.js"></script>
     <!-- key= 뒤에 API 키 입력 -->
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyD322QkIryt_012JL3lweXcsUjSAn4rl94&callback=initMap"
-        type="text/javascript" async defer></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyD322QkIryt_012JL3lweXcsUjSAn4rl94&callback=initMap" type="text/javascript" async defer></script>
 
-
+    <!-- custom js -->
     <script src="js/script.js"></script>
     <script src="js/scroll.js"></script>
 </body>

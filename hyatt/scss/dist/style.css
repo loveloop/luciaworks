@@ -83,6 +83,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 200px;
   height: 60px;
@@ -96,6 +97,7 @@ p {
 }
 
 .first {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 390;
   stroke-dashoffset: 390;
@@ -104,6 +106,7 @@ p {
 }
 
 .middle {
+  -webkit-animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 1260;
   stroke-dashoffset: 1260;
@@ -112,15 +115,27 @@ p {
 }
 
 .last {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
   fill: #a3876b;
   fill-opacity: 0;
 }
+
+@-webkit-keyframes fillOpacity {
+  100% {
+    fill-opacity: 1;
+  }
+}
 @keyframes fillOpacity {
   100% {
     fill-opacity: 1;
+  }
+}
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 @keyframes draw {
@@ -142,6 +157,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 200px;
   height: 60px;
@@ -153,6 +169,7 @@ p {
   stroke-miterlimit: 10;
 }
 #loading .first {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 390;
   stroke-dashoffset: 390;
@@ -160,6 +177,7 @@ p {
   fill-opacity: 0;
 }
 #loading .middle {
+  -webkit-animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 2s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 1245;
   stroke-dashoffset: 1245;
@@ -167,15 +185,26 @@ p {
   fill-opacity: 0;
 }
 #loading .last {
+  -webkit-animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   animation: draw 1.5s 0s linear forwards, fillOpacity 0.5s 2s forwards ease-in;
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
   fill: #a3876b;
   fill-opacity: 0;
 }
+@-webkit-keyframes fillOpacity {
+  100% {
+    fill-opacity: 1;
+  }
+}
 @keyframes fillOpacity {
   100% {
     fill-opacity: 1;
+  }
+}
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 @keyframes draw {
@@ -571,6 +600,8 @@ body .inner {
   background-color: #a3876b;
   display: block;
   margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 #h_menu .hamburger:hover {
@@ -580,9 +611,15 @@ body .inner {
   opacity: 0;
 }
 #h_menu #hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+  -ms-transform: translateY(6px) rotate(45deg);
+  -o-transform: translateY(6px) rotate(45deg);
   transform: translateY(6px) rotate(45deg);
 }
 #h_menu #hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
   transform: translateY(-8px) rotate(-45deg);
 }
 
@@ -893,6 +930,15 @@ body .inner {
   }
 }
 @keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
   from {
     transform: translate3d(0, 40px, 0);
   }
@@ -2040,6 +2086,15 @@ body .inner {
   position: relative;
 }
 @keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
   from {
     transform: translate3d(0, 40px, 0);
   }

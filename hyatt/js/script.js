@@ -113,6 +113,25 @@ $(document).ready(function () {
         $('.bgGnb').stop().slideUp(speed - 2);
     }
 
+    //모바일버전 메뉴, 햄버거버튼
+    //햄버거버튼 : 클릭 시 풀스크린 메뉴 나옴
+	$(".hamburger").on('click',function(){
+		var $mgnb = $("#mgnb");
+		$(this).toggleClass("is-active");
+		if (!$mgnb.hasClass('active')) {
+			$mgnb.fadeIn().toggleClass('active');
+			$mgnb.on('scroll touchmove mousewheel', function(e){
+				e.preventDefault();
+				e.stopPropagation(); 
+				return false;
+			});
+		  } else {
+			$mgnb.fadeOut().removeClass('active');
+			$mgnb.off('scroll touchmove mousewheel'); 
+		  }
+	  });
+
+
     // #visual
     $('#infoWrap>li .open').on('click', function (e) {
         e.preventDefault();
@@ -165,22 +184,21 @@ $(document).ready(function () {
         $(".videoBanner").stop().animate({
             "margin-left": -aNum * 100 + "%"
         }, 500);
-        if (aNum == count) {
-            $(".circle>li").eq(0).addClass("active").siblings().removeClass("active");
-            $(".videoBanner>li").eq(0).addClass("active").siblings().removeClass("active");
-        } else {
+        
             $(".circle>li").eq(aNum).addClass("active").siblings().removeClass("active");
             $(".videoBanner>li").eq(aNum).addClass("active").siblings().removeClass("active");
-        }
+       
+      
     }
 
     function moveRight() {
-        if (aNum == count) {
+        if (aNum === count) {
             $(".videoBanner").css("margin-left", 0);
             aNum = 0;
         }
         aNum++;
         moveBanner();
+        
     }
 
     function moveLeft() {
@@ -190,6 +208,7 @@ $(document).ready(function () {
         }
         aNum--;
         moveBanner();
+      
     }
 
     //탭기능

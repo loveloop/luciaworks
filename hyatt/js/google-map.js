@@ -25,7 +25,7 @@ function initMap() {
 
 
     //마커 이미지
-    var customicon = 'http://imagineloop.com/portfolio/deardahlia/images/googlemap-marker.png';
+    var customicon = 'images/googlemap-marker.png';
 
     //인포윈도우
     var infowindow = new google.maps.InfoWindow();
