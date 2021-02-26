@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval'">
+
     <title>Luxury Vegan Beauty | 디어달리아</title>
 
     <meta name="viewport" content="width=device-width">
@@ -215,7 +217,7 @@
             <li><a href="#void"><i class="icon-instagram"></i><span class="blind">instagram</span></a></li>
             <li><a href="#void"><i class="icon-youtube-play"></i><span class="blind">youtube</span></a></li>
             <li><a href="#void"><i class="icon-help"></i><span class="blind">help</span></a></li>
-            <li><a href="#void"><i class="icon-angle-up"><span class="blind">go to top</span></i></a></li>
+            <li class="goTop"><button><i class="icon-angle-up"><span class="blind">go to top</span></i></button></li>
         </ul>
     </div>
     <aside class="footFix">        
@@ -233,8 +235,10 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=692d3db71c174baa06e5cc8fca585cc7&libraries=services,clusterer,drawing"></script>
     <script type="text/javascript" src="js/kakao-map.js"></script>
     
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="lib/jquery-3.5.1.min.js"></script>
+    <!-- <script src="lib/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="js/script.js"></script>
+
 
 </body>
 

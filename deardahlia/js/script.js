@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     //scrollTop 이벤트
     function goTopEvent() {
-        $(".goTop").on("click", function () {
+        $(".goTop>button").on("click tab", function () {
 
             var yPos = $body.offset().top;
             $body.stop().animate({
@@ -31,17 +31,17 @@ $(document).ready(function () {
     // 메뉴이벤트
     function menuEvent() {
         $('#nav').removeClass('on');
-        $('.hamBtn').on('click', function () {
+        $('.hamBtn>a').on('click tab', function () {
             $('#nav').addClass("on");
         });
-        $('.navClose').on('click', function () {
+        $('.navClose').on('click tab', function () {
             $('#nav').removeClass('on');
         });
     }
 
     //배너 닫기
     function bannerClose() {
-        $(".closeBtn").on("click", function () {
+        $(".closeBtn").on("click tab", function () {
             $("#topBanner").slideUp(500);
         })
     }
@@ -54,14 +54,14 @@ $(document).ready(function () {
         $(".slide>li").width((100 / (bannerCount + 1)) + "%");
 
 
-        $(".slideDot>a").on("click", function (e) {
+        $(".slideDot>a").on("click tab", function (e) {
             e.preventDefault;
             e.stopPropagation;
             showBanner = $(this).index();
             moveBanner();
         });
 
-        $(".next").on("click", function (e) {
+        $(".next").on("click tab", function (e) {
             e.preventDefault;
             e.stopPropagation;
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
             moveBanner();
         });
 
-        $(".prev").on("click", function (e) {
+        $(".prev").on("click tab", function (e) {
             e.preventDefault;
             e.stopPropagation;
             if (showBanner == 0) {
@@ -109,7 +109,7 @@ $(document).ready(function () {
     }
 
     function slideTimer() {
-        //$(".next").trigger("click");
+        //$(".next").trigger("click tab");
         if (showBanner == bannerCount) {
             showBanner = 0;
             $(".slide").css("margin-left", 0);
