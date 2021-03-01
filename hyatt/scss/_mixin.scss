@@ -7,16 +7,12 @@ $basicColor:#444;
 $midColor:#777;
 $lightColor:#888;
 $darkColor:#292929;
-
 $bg : #111;
 $border :#2f2f2f;
 
 // font
 $default:'Arita';
 $noto:'Noto Sans KR';
-
-//버튼 이름을 배열에 넣기
-$buttons:(prev, next, more);
 
 /* 반응형 사이즈 */
 $pc:1040px;
@@ -129,9 +125,7 @@ $mobile-mini:360px;
 
 // footer banner
 @mixin clientBnr($x, $y, $hx:$x, $hy:$y) {
-
     background-position: $x $y;
-
     &:hover {
         background-position-x: $hx;
         background-position-y: $hy;

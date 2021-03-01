@@ -107,6 +107,7 @@ body {
         }
     }
 }
+
 #header {
     width: 100%;
     background: $bg;
@@ -147,9 +148,7 @@ body {
         display: none;
         border-top: 1px solid $border;
         width: 100%;
-
         position: absolute;
-
         left: 0px;
         height: auto;
         top: 110px;
@@ -163,10 +162,6 @@ body {
             position: absolute;
             left: 10px;
             bottom: 10px;
-
-
-
-
 
             a {
                 width: 100px;
@@ -182,8 +177,6 @@ body {
                 }
             }
         }
-
-        
 
         #nav {
             position: absolute;
@@ -201,8 +194,6 @@ body {
                     float: left;
                     box-sizing: border-box;
                     @include font($color:$lightColor, $w:bold, $s:17px, $l:70px);
-
-
 
                     &:hover {
                         width: 100%;
@@ -273,11 +264,10 @@ body {
             padding: 0 10px;
             transition: ease 0.3s;
 
-
             a {
                 height: 70px;
                 box-sizing: border-box;
-                @include font($color:#fff, $l:70px);
+                @include font($color:#fff, $l:78px);
                 background-color: $mainColor;
 
                 &:hover {
@@ -369,7 +359,6 @@ body {
 .mgnbLogo {
     display: none;
 
-
     @include respond($pc) {
         display: block;
         position: fixed;
@@ -382,12 +371,10 @@ body {
             height: 40px;
             display: block;
 
-
             img {
                 width: 100%;
             }
         }
-
     }
 
     @include respond($tablet) {
@@ -446,7 +433,6 @@ body {
     }
 }
 
-
 #mgnb {
     display: none;
     width: 100%;
@@ -468,21 +454,22 @@ body {
             float: left;
             margin-right: 10px;
 
-            @include respond($mobile-mini){
-                &:first-child{
+            @include respond($mobile-mini) {
+                &:first-child {
                     display: none;
                 }
             }
-            .langBox{
+
+            .langBox {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            a{
+
+            a {
                 color: #fff;
             }
         }
     }
-
 
     .hamNav {
         position: absolute;
@@ -490,21 +477,21 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9998;
-        width:100%;
+        width: 100%;
         text-align: center;
-        >ul{
-           
+
+        >ul {
+
             >li {
                 list-style-type: none;
                 padding: 20px 0;
                 font-size: 20px;
                 text-transform: uppercase;
                 transition: all ease 0.2s;
-                
                 cursor: pointer;
                 position: relative;
 
-                &::after{
+                &::after {
                     content: "";
                     opacity: 0;
                     position: absolute;
@@ -512,108 +499,92 @@ body {
                     left: 0px;
                     right: 0px;
                     bottom: 0px;
-                    
                     background-size: cover;
                     overflow: hidden;
                     box-sizing: border-box;
                     background-repeat: no-repeat;
                     background-position: center;
-                   
-            
-            
                 }
-                &:nth-child(1)::after{
+
+                &:nth-child(1)::after {
                     background-image: url(../images/gallery-hotel5.jpg);
                     background-position: top center;
-                    
                 }
-                &:nth-child(2)::after{
+
+                &:nth-child(2)::after {
                     background-image: url(../images/gallery-suites6.jpg);
-                    
+
                 }
-                &:nth-child(3)::after{
+
+                &:nth-child(3)::after {
                     background-image: url(../images/gallery-dining2.jpg);
-                   
+
                 }
-                &:nth-child(4)::after{
+
+                &:nth-child(4)::after {
                     background-image: url(../images/gallery-wedding1.jpg);
-                    
+
                 }
-                &:nth-child(5)::after{
+
+                &:nth-child(5)::after {
                     background-image: url(../images/gallery-activities4.jpg);
                 }
 
-                
-
-                @include respond($tablet){
+                @include respond($tablet) {
                     padding: 15px 0;
                     font-size: 18px;
                 }
-               
-                >a{
-                    color: #a3876b;
+
+                >a {
+                    color: $pointColor;
                     position: relative;
                     z-index: 1;
                     transition: all ease 0.2s;
                 }
-                ul{
-                   display: none;
-                   position: relative;
-                   z-index: 1;
-                    li{
-                        
-                        a{
+
+                ul {
+                    display: none;
+                    position: relative;
+                    z-index: 1;
+
+                    li {
+                        a {
                             color: #fff;
                             opacity: 0.8;
-                           
                             font-size: 20px;
 
-                            @include respond($tablet){
-                              
+                            @include respond($tablet) {
                                 font-size: 16px;
                             }
                         }
                     }
                 }
-                
-        
+
                 &:hover {
-                    
                     height: 100%;
-                    //background:#222222;
-                    &::after{
+
+                    &::after {
                         opacity: 0.1;
-                        
                     }
-                    // background:url(../images/gallery-hotel5.jpg) no-repeat center;
-                    // background-size: cover;
 
-                >a{
-                    color: $hColor;
-                }
-                    
+                    >a {
+                        color: $hColor;
+                    }
 
+                    >ul {
+                        display: block;
 
-                    >ul{
-                      display: block;
-                      
-                      li{
-                          &:hover a{
-                            opacity: 1;
-                            
-                          }
-                      }
+                        li {
+                            &:hover a {
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
+            }
         }
-        }
-        
+    }
 }
-
-   
-}
-
-
 
 .page {
     height: auto;
@@ -626,9 +597,6 @@ body {
 }
 
 /* #container */
-// .sticky+#container {
-//     padding-top: 60px;
-// }
 #container {
     padding-top: 0px;
 
@@ -656,13 +624,10 @@ body {
         }
 
         >p {
-            font: 18px/1 "Arita";
-            color: $midColor;
-            text-align: left;
+            @include font($color:$midColor,$s:18px);            
             margin-bottom: 30px;
             position: relative;
             padding-left: 155px;
-            line-height: 1.5;
             box-sizing: border-box;
         }
     }
@@ -672,7 +637,6 @@ body {
 #visual {
     width: 100%;
     height: 100vh;
-    // height: calc(100vh - 110px);
     background: #ddd;
     position: relative;
     overflow: hidden;
@@ -693,7 +657,8 @@ body {
         height: auto;
         opacity: 0.3;
         transform: scale(1.4);
-        @include respond($mobile){
+
+        @include respond($mobile) {
             transform: scale(1);
         }
     }
@@ -707,11 +672,9 @@ body {
             width: 100%;
             top: 65px;
             transform: translateX(-50%);
-
         }
 
         h3 {
-
             @include font($color:$hColor, $w:bold, $s:25px);
             letter-spacing: 2px;
             padding: 20px 0 0;
@@ -740,9 +703,7 @@ body {
                 @include respond($mobile) {
                     font-size: 16px;
                 }
-
             }
-
         }
 
         .textShow {
@@ -752,7 +713,6 @@ body {
             @include respond($pc) {
                 width: 60%;
             }
-
             @include respond($tablet) {
                 display: none;
             }
@@ -765,7 +725,6 @@ body {
                     @include font($s:17px, $color:#fff);
 
                     &.pTit {
-
                         @include animated();
                         padding: 10px 0;
                     }
@@ -784,7 +743,6 @@ body {
             margin-top: 40px;
 
             @include clearFix();
-
             @include respond($pc) {
                 width: 70%;
                 margin-left: 15%;
@@ -846,8 +804,6 @@ body {
                             }
                         }
                     }
-
-
                 }
 
                 &:nth-of-type(2) {
@@ -865,7 +821,6 @@ body {
                     }
 
                     .back {
-
                         .boxWrap {
                             h4 {
                                 color: $pointColor;
@@ -963,7 +918,6 @@ body {
                                         display: none;
                                     }
 
-
                                     .pTxt {
                                         overflow: hidden;
                                         text-overflow: ellipsis;
@@ -977,10 +931,7 @@ body {
                                         word-break: break-all;
                                         word-wrap: break-word;
                                     }
-
-
                                 }
-
 
                                 .uInfo {
                                     color: $lightColor;
@@ -990,8 +941,6 @@ body {
                             }
                         }
                     }
-
-
                 }
 
                 &:nth-of-type(4) {
@@ -1088,9 +1037,7 @@ body {
                         @include respond($mobile) {
                             display: none;
                         }
-
                     }
-
                     @include viewMore();
                 }
 
@@ -1142,8 +1089,6 @@ body {
                             padding-right: 0px;
                             overflow: auto;
                         }
-
-
                     }
 
                     strong {
@@ -1363,6 +1308,7 @@ body {
             .s1 {
                 transform: scale(1);
                 opacity: 0.2;
+                
             }
         }
     }
@@ -1373,13 +1319,13 @@ body {
                 transform: scale(1.5);
                 opacity: 0.1;
                 transition: all ease 0.3s;
-                
-                top: 0;
+                top: -40px;
 
                 @include respond($mobile) {
                     text-align: center;
                     width: 100%;
                     font-size: 55px;
+                    top:0;
                 }
             }
 
@@ -1473,7 +1419,6 @@ body {
                         img {
                             width: 300%;
                         }
-
                     }
 
                     img {
@@ -1511,7 +1456,6 @@ body {
                             display: inline-block;
                             padding: 5px 10px;
                             margin-bottom: 10px;
-
                         }
 
                         .sText {
@@ -1603,8 +1547,6 @@ body {
             left: 0px;
             z-index: 101;
 
-
-
             li {
                 display: inline-block;
                 margin: -2px;
@@ -1646,7 +1588,6 @@ body {
         height: 100%;
         min-height: 730px;
         padding: 90px 0px;
-
     }
 
     >* {
@@ -1664,17 +1605,12 @@ body {
                         transform: translateX(0px);
                         top: 60px;
                         opacity: 1;
-                        color: #292929;
+                        color: $darkColor;
                         font-size: 45px;
                     }
 
                     @include respond($mobile-mini) {
-
-
                         top: 40px;
-
-
-
                     }
                 }
             }
@@ -1717,8 +1653,6 @@ body {
 
             @include respond($mobile) {
                 mix-blend-mode: hard-light;
-
-
             }
 
             .s1 {
@@ -1740,7 +1674,7 @@ body {
                 @include respond($mobile) {
                     padding-left: 0px;
                     left: 20px;
-                    color: #292929;
+                    color: $darkColor;
                     font-size: 55px;
                     padding-right: 50px;
                     transform: translateX(0);
@@ -1787,7 +1721,6 @@ body {
                             font-size: 16px;
                             line-height: 35px;
                             color: $basicColor;
-                            ;
 
                             &.btnAni {
                                 border: 0;
@@ -1797,9 +1730,7 @@ body {
                                 background: rgb(255 255 255);
                                 box-shadow: none;
                             }
-
                         }
-
 
                         &:hover {
                             color: $darkColor;
@@ -1817,7 +1748,6 @@ body {
 
                 &:nth-of-type(1)>dt {
                     left: 20px;
-
                 }
 
                 &:nth-of-type(2)>dt {
@@ -1859,8 +1789,6 @@ body {
                         font-size: 17px;
                         z-index: 101;
                         position: relative;
-
-
                     }
 
                     >p {
@@ -1887,9 +1815,6 @@ body {
                                 width: 100%;
                                 box-sizing: border-box;
                                 padding: 30px 25px 50px;
-
-
-
                             }
 
                             p {
@@ -1922,7 +1847,6 @@ body {
                                 border: none;
                                 top: -325px;
                             }
-
 
                             img {
                                 width: auto;
@@ -1999,7 +1923,6 @@ body {
                 .s1 {
                     transform: scale(1);
                     opacity: 0.2;
-
                 }
             }
 
@@ -2030,7 +1953,6 @@ body {
                     top: 0;
                     padding: 0;
                 }
-
             }
 
             .s2 {
@@ -2052,7 +1974,6 @@ body {
                     font-size: 20px;
                     top: 20px;
                 }
-
             }
         }
 
@@ -2070,7 +1991,6 @@ body {
             }
 
             @include respond($mobile) {
-
                 padding: 75px 50px 0;
                 text-align: center;
             }
@@ -2092,11 +2012,9 @@ body {
                 }
 
                 @include respond($mobile) {
-
                     left: 50%;
                     transform: translateX(-50%);
                 }
-
             }
         }
 
@@ -2107,32 +2025,25 @@ body {
             justify-content: center;
             flex-wrap: wrap;
 
-
-
             li {
                 margin-right: 10px;
                 margin-bottom: 10px;
                 border: 1px solid $mainColor;
                 border-radius: 50px;
                 background: #fff;
-
                 cursor: pointer;
                 transition: all ease 0.5s;
-
-
 
                 &:hover {
                     background: rgba(136, 112, 88, 0.2);
                 }
 
-                >a {
-                    color: $mainColor;
+                >a {                    
                     display: inline-block;
-                    height: 27px;
-                    font: normal 14px/27px 'Arita';
+                    height: 27px;                    
                     padding: 0px 8px;
-                    text-align: center;
                     transition: all ease 0.5s;
+                    @include font($color:$mainColor,$s:14px, $l:27px);
                 }
 
                 &.on {
@@ -2184,12 +2095,10 @@ body {
                     vertical-align: bottom;
 
                     a {
+                        @include font($color:#fff, $s:15px, $l:215px);
                         display: block;
                         width: 100%;
-                        height: 100%;
-                        font: normal 15px/215px 'Arita';
-                        color: #fff;
-                        //opacity: 0;
+                        height: 100%;   
                         transition: all ease .5s;
                         background: $basicColor;
                         position: relative;
@@ -2210,6 +2119,7 @@ body {
 
                         &::after {
                             content: 'VIEW';
+                            @include font($color:#c5ab9b, $w:bold, $s:20px, $l:215px, $f:$default);
                             display: block;
                             width: 100%;
                             height: 100%;
@@ -2217,11 +2127,7 @@ body {
                             top: 0px;
                             left: 0px;
                             background: rgba(0, 0, 0, 0.6);
-                            font: bold 20px/215px 'Arita';
-                            color: #c5ab9b;
-                            text-align: center;
                             opacity: 0;
-                            //transition: background-color 1s;
                             transition: all .2s;
                             box-sizing: border-box;
                         }
@@ -2262,10 +2168,9 @@ body {
                     .s1 {
                         mix-blend-mode: color-burn;
                         opacity: 0.8;
-                        color: #887058;
+                        color: $mainColor;
                         font-size: 80px;
                         position: relative;
-                        
                         top: 0;
 
                         @include respond($tablet) {
@@ -2302,7 +2207,7 @@ body {
                         padding: 0;
                         left: 0;
                     }
-                    
+
                 }
             }
         }
@@ -2487,7 +2392,6 @@ body {
                 @include respond($pc) {
                     float: none;
                     width: 100%;
-
                     margin-top: 25px;
                     margin-bottom: 25px;
                 }
@@ -2654,7 +2558,6 @@ body {
                     width: 100%;
                     display: flex;
                     justify-content: center;
-
                 }
 
                 ul {
@@ -2672,8 +2575,7 @@ body {
                             width: 100%;
                             height: 100%;
 
-                            font: normal 25px/38px 'Arita';
-                            text-align: center;
+                            @include font($s:25px, $l:38px,$color:$lightColor);
                         }
                     }
                 }
@@ -2703,9 +2605,7 @@ body {
                     padding: 5px 10px;
 
                     @include respond($mobile) {
-
                         padding: 0px 10px;
-
                     }
 
                     a {
@@ -2754,10 +2654,8 @@ body {
                 }
 
                 a {
-                    display: inline-block;
-                    font: normal 12px/30px "Arita";
-                    color: $lightColor;
-                    text-align: left;
+                    @include font($color:$lightColor, $w:normal, $s:12px, $l:30px, $f:$default, $a:left);
+                    display: inline-block;                   
                     transition: all ease 0.5s;
                     height: 18px;
                     padding-left: 20px;
@@ -2832,33 +2730,27 @@ body {
     }
 
     .goTop {
-
         text-align: center;
         position: fixed;
         width: 45px;
         height: 40px;
 
         @include respond($tablet) {
-
             right: 10px;
             bottom: 60px;
         }
 
         a {
             display: block;
-
-
         }
     }
 
     @include respond($tablet) {
         left: 0;
         width: 100%;
-
     }
 
     a {
-
         display: block;
         text-align: center;
         width: 100%;
@@ -2869,7 +2761,6 @@ body {
             i {
                 color: $hColor;
             }
-
         }
 
         i {
@@ -2877,8 +2768,6 @@ body {
             font-size: 18px;
             @include center();
             transition: color ease 0.3s;
-
-
         }
     }
 }
@@ -2919,11 +2808,7 @@ body {
             &.booknow {
                 display: block;
             }
-
-
-
         }
-
-
     }
 }
+

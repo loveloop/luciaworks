@@ -1,11 +1,11 @@
 $(document).ready(function () {
     "use strict";
 
-    var $body = $("html, body");
+    var $body = $("html, body"),
+        $loading = $('#loading');
 
     //header 변수
-    var $header = $('#header'),
-        $gnb = $('#nav'),
+    var $gnb = $('#nav'),
         $gnb_li = $gnb.children('li'),
         $gnb_li_a = $gnb_li.children('a'),
         $gnb_li_ul = $gnb_li.children('ul'),
@@ -24,7 +24,6 @@ $(document).ready(function () {
         navEvent();
     }
 
-
     //scroll event
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 112) {
@@ -36,9 +35,9 @@ $(document).ready(function () {
 
     //로딩화면 기능
     function loading() {
-        $('#loading').fadeIn();
+        $loading.fadeIn();
         setTimeout(function () {
-            $('#loading').fadeOut(1000);
+            $loading.fadeOut(1000);
         }, 3500);
     }
 
@@ -59,7 +58,6 @@ $(document).ready(function () {
             $body.stop().animate({
                 scrollTop: yPos
             }, 1000);
-
         });
     }
 
@@ -72,9 +70,8 @@ $(document).ready(function () {
 
     // header - nav
     function navEvent() {
-        
         getSubMaxHeight();
-       
+
         $gnb.on('mouseenter', openSub);
         $gnb.on('mouseleave', closeSub);
 
@@ -98,8 +95,6 @@ $(document).ready(function () {
     }
 
     function openSub() {
-        // var isBgGnb = $('.bgGnb').length;      
-
         $('.bgGnb').css({
             height: ht_max
         });
@@ -115,22 +110,21 @@ $(document).ready(function () {
 
     //모바일버전 메뉴, 햄버거버튼
     //햄버거버튼 : 클릭 시 풀스크린 메뉴 나옴
-	$(".hamburger").on('click',function(){
-		var $mgnb = $("#mgnb");
-		$(this).toggleClass("is-active");
-		if (!$mgnb.hasClass('active')) {
-			$mgnb.fadeIn().toggleClass('active');
-			$mgnb.on('scroll touchmove mousewheel', function(e){
-				e.preventDefault();
-				e.stopPropagation(); 
-				return false;
-			});
-		  } else {
-			$mgnb.fadeOut().removeClass('active');
-			$mgnb.off('scroll touchmove mousewheel'); 
-		  }
-	  });
-
+    $(".hamburger").on('click', function () {
+        var $mgnb = $("#mgnb");
+        $(this).toggleClass("is-active");
+        if (!$mgnb.hasClass('active')) {
+            $mgnb.fadeIn().toggleClass('active');
+            $mgnb.on('scroll touchmove mousewheel', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+        } else {
+            $mgnb.fadeOut().removeClass('active');
+            $mgnb.off('scroll touchmove mousewheel');
+        }
+    });
 
     // #visual
     $('#infoWrap>li .open').on('click', function (e) {
@@ -184,11 +178,9 @@ $(document).ready(function () {
         $(".videoBanner").stop().animate({
             "margin-left": -aNum * 100 + "%"
         }, 500);
-        
-            $(".circle>li").eq(aNum).addClass("active").siblings().removeClass("active");
-            $(".videoBanner>li").eq(aNum).addClass("active").siblings().removeClass("active");
-       
-      
+
+        $(".circle>li").eq(aNum).addClass("active").siblings().removeClass("active");
+        $(".videoBanner>li").eq(aNum).addClass("active").siblings().removeClass("active");
     }
 
     function moveRight() {
@@ -198,7 +190,6 @@ $(document).ready(function () {
         }
         aNum++;
         moveBanner();
-        
     }
 
     function moveLeft() {
@@ -208,17 +199,14 @@ $(document).ready(function () {
         }
         aNum--;
         moveBanner();
-      
     }
 
     //탭기능
-    $('#tab>dl>dt>a').on('click, focusin, touchstart', function (e) {
+    $('#tab>dl>dt>a').on('click, focusin', function (e) {
         e.preventDefault();
         var sNum = $(this).parent('dt').closest("dl").index();
-        $('#tab>dl>dt').removeClass('on');
-        $('#tab>dl>dd').removeClass('on');
-        $(this).parent('dt').addClass('on');
-        $(this).parent('dt').next('dd').addClass('on');
+        $('#tab>dl>dt, #tab>dl>dd').removeClass('on');
+        $(this).parent('dt').addClass('on').next('dd').addClass('on');
 
         switch (sNum) {
             case 0:
@@ -294,7 +282,4 @@ $(document).ready(function () {
             $(this).css("left", 0);
         });
     }
-
-
-
 });

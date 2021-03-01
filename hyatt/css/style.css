@@ -459,7 +459,7 @@ body .inner {
   font-family: "Arita";
   color: #fff;
   text-align: center;
-  line-height: 70px;
+  line-height: 78px;
   background-color: #887058;
 }
 #header .inner .quickBtn a:hover {
@@ -754,13 +754,15 @@ body .inner {
   transition: all ease 1s;
 }
 #container .inner > p {
-  font: 18px/1 "Arita";
+  font-weight: normal;
+  font-size: 18px;
+  font-family: "Arita";
   color: #777;
-  text-align: left;
+  text-align: center;
+  line-height: 1.5;
   margin-bottom: 30px;
   position: relative;
   padding-left: 155px;
-  line-height: 1.5;
   box-sizing: border-box;
 }
 
@@ -1514,13 +1516,14 @@ body .inner {
   transform: scale(1.5);
   opacity: 0.1;
   transition: all ease 0.3s;
-  top: 0;
+  top: -40px;
 }
 @media screen and (max-width: 640px) {
   #about .inner h3 .s1 {
     text-align: center;
     width: 100%;
     font-size: 55px;
+    top: 0;
   }
 }
 @media screen and (max-width: 640px) {
@@ -2341,13 +2344,16 @@ body .inner {
   background: rgba(136, 112, 88, 0.2);
 }
 #gallery .inner ul.tabs li > a {
-  color: #887058;
   display: inline-block;
   height: 27px;
-  font: normal 14px/27px "Arita";
   padding: 0px 8px;
-  text-align: center;
   transition: all ease 0.5s;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Arita";
+  color: #887058;
+  text-align: center;
+  line-height: 27px;
 }
 #gallery .inner ul.tabs li.on {
   background: #887058;
@@ -2399,11 +2405,15 @@ body .inner {
   vertical-align: bottom;
 }
 #gallery .inner .item_wrap .item > div a {
+  font-weight: normal;
+  font-size: 15px;
+  font-family: "Arita";
+  color: #fff;
+  text-align: center;
+  line-height: 215px;
   display: block;
   width: 100%;
   height: 100%;
-  font: normal 15px/215px "Arita";
-  color: #fff;
   transition: all ease 0.5s;
   background: #444;
   position: relative;
@@ -2423,6 +2433,12 @@ body .inner {
 }
 #gallery .inner .item_wrap .item > div a::after {
   content: "VIEW";
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Arita";
+  color: #c5ab9b;
+  text-align: center;
+  line-height: 215px;
   display: block;
   width: 100%;
   height: 100%;
@@ -2430,9 +2446,6 @@ body .inner {
   top: 0px;
   left: 0px;
   background: rgba(0, 0, 0, 0.6);
-  font: bold 20px/215px "Arita";
-  color: #c5ab9b;
-  text-align: center;
   opacity: 0;
   transition: all 0.2s;
   box-sizing: border-box;
@@ -2892,8 +2905,12 @@ body .inner {
   display: inline-block;
   width: 100%;
   height: 100%;
-  font: normal 25px/38px "Arita";
+  font-weight: normal;
+  font-size: 25px;
+  font-family: "Arita";
+  color: #888;
   text-align: center;
+  line-height: 38px;
 }
 #footer .inner .footBottom {
   text-align: center;
@@ -2964,10 +2981,13 @@ body .inner {
   }
 }
 #sidenav .inner ul li a {
-  display: inline-block;
-  font: normal 12px/30px "Arita";
+  font-weight: normal;
+  font-size: 12px;
+  font-family: "Arita";
   color: #888;
   text-align: left;
+  line-height: 30px;
+  display: inline-block;
   transition: all ease 0.5s;
   height: 18px;
   padding-left: 20px;
