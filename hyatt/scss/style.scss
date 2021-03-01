@@ -693,6 +693,9 @@ body {
         height: auto;
         opacity: 0.3;
         transform: scale(1.4);
+        @include respond($mobile){
+            transform: scale(1);
+        }
     }
 
     .infoBox {
