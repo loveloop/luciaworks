@@ -213,7 +213,7 @@ $(document).ready(function () {
 
     //탭기능
     $('#tab>dl>dt>a').on('click, focusin', function () {
-        // e.preventDefault();
+        e.preventDefault();
         var sNum = $(this).parent('dt').closest("dl").index();
         $('#tab>dl>dt').removeClass('on');
         $('#tab>dl>dd').removeClass('on');

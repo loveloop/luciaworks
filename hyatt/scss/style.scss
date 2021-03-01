@@ -545,7 +545,7 @@ body {
 
                 
 
-                @include respond($mobile-mini){
+                @include respond($mobile){
                     padding: 15px 0;
                     font-size: 18px;
                 }
@@ -568,7 +568,7 @@ body {
                            
                             font-size: 20px;
 
-                            @include respond($mobile-mini){
+                            @include respond($mobile){
                               
                                 font-size: 16px;
                             }
@@ -1776,6 +1776,7 @@ body {
 
                     a {
                         width: 100%;
+                        cursor: pointer;
                         @include font($s:18px, $color:$basicColor, $l:50px, $w:bold);
 
                         @include respond($mobile) {

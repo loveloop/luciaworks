@@ -708,7 +708,7 @@ body .inner {
 #mgnb .hamNav > ul > li:nth-child(5)::after {
   background-image: url(../images/gallery-activities4.jpg);
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 640px) {
   #mgnb .hamNav > ul > li {
     padding: 15px 0;
     font-size: 18px;
@@ -730,7 +730,7 @@ body .inner {
   opacity: 0.8;
   font-size: 20px;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 640px) {
   #mgnb .hamNav > ul > li ul li a {
     font-size: 16px;
   }
@@ -2003,6 +2003,7 @@ body .inner {
 }
 #rooms .inner #tab dl dt a {
   width: 100%;
+  cursor: pointer;
   font-weight: bold;
   font-size: 18px;
   font-family: "Arita";
