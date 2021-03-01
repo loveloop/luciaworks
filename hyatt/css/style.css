@@ -635,7 +635,7 @@ body .inner {
 #mgnb .hamNav > ul > li {
   list-style-type: none;
   padding: 20px 0;
-  font-size: 26px;
+  font-size: 20px;
   text-transform: uppercase;
   transition: all ease 0.2s;
   cursor: pointer;
@@ -671,7 +671,7 @@ body .inner {
 #mgnb .hamNav > ul > li:nth-child(5)::after {
   background-image: url(../images/gallery-activities4.jpg);
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 767px) {
   #mgnb .hamNav > ul > li {
     padding: 15px 0;
     font-size: 18px;
@@ -693,7 +693,7 @@ body .inner {
   opacity: 0.8;
   font-size: 20px;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 767px) {
   #mgnb .hamNav > ul > li ul li a {
     font-size: 16px;
   }
@@ -1509,13 +1509,13 @@ body .inner {
   transform: scale(1.5);
   opacity: 0.1;
   transition: all ease 0.3s;
+  top: 0;
 }
 @media screen and (max-width: 640px) {
   #about .inner h3 .s1 {
     text-align: center;
     width: 100%;
     font-size: 55px;
-    top: 0;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1957,6 +1957,7 @@ body .inner {
 }
 #rooms .inner #tab dl dt a {
   width: 100%;
+  cursor: pointer;
   font-weight: bold;
   font-size: 18px;
   font-family: "Arita";
@@ -2470,11 +2471,11 @@ body .inner {
   color: #887058;
   font-size: 80px;
   position: relative;
+  top: 0;
 }
 @media screen and (max-width: 767px) {
   #location.on .world .inner h3 .s1 {
     font-size: 50px;
-    top: 0;
   }
 }
 #location .world .inner h3 {
