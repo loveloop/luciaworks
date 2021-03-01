@@ -365,6 +365,7 @@ body {
 }
 
 // mobile menu
+
 .mgnbLogo {
     display: none;
 
@@ -725,7 +726,7 @@ body {
                 margin: 20px auto;
                 opacity: 0.8;
 
-                @include respond($tablet) {
+                @include respond($pc) {
                     margin: 15px auto;
                 }
             }
@@ -785,7 +786,7 @@ body {
                 width: 70%;
                 margin-left: 15%;
                 margin-right: 15%;
-                margin-top: 20px;
+                margin-top: 25px;
                 height: 500px;
             }
 
@@ -2262,6 +2263,7 @@ body {
 
                         @include respond($tablet) {
                             font-size: 50px;
+                            top: 0;
                         }
                     }
                 }
@@ -2287,8 +2289,14 @@ body {
                     @include respond($pc) {
                         font-size: 50px;
                         width: 100%;
-                        position: unset;
+                        position: relative;
+                        width: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        padding: 0;
+                        left: 0;
                     }
+                    
                 }
             }
         }

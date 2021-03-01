@@ -865,7 +865,7 @@ body .inner {
   margin: 20px auto;
   opacity: 0.8;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1040px) {
   #visual .infoBox h3::after {
     margin: 15px auto;
   }
@@ -992,7 +992,7 @@ body .inner {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
-    margin-top: 20px;
+    margin-top: 25px;
     height: 500px;
   }
 }
@@ -2529,6 +2529,7 @@ body .inner {
 @media screen and (max-width: 767px) {
   #location.on .world .inner h3 .s1 {
     font-size: 50px;
+    top: 0;
   }
 }
 #location .world .inner h3 {
@@ -2583,7 +2584,12 @@ body .inner {
   #location .world .inner h3 .s1 {
     font-size: 50px;
     width: 100%;
-    position: unset;
+    position: relative;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    left: 0;
   }
 }
 #location .world #brand {
