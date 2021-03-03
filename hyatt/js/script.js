@@ -304,7 +304,7 @@ $(document).ready(function () {
     $(".ui-datepicker-div").hide();
     $(".reservBox .close").on("click", function () {
         $(".search").hide();
-        $(".reservBox").slideUp(500);
+        $(".reservBox").slideUp(500).fadeOut("fast");
         $(".ui-datepicker-div").hide();
     });
 
