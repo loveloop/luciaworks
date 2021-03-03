@@ -355,7 +355,6 @@ body {
 }
 
 // mobile menu
-
 .mgnbLogo {
     display: none;
 
@@ -383,6 +382,33 @@ body {
         }
     }
 
+}
+
+.reservBtn {
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 104;
+    top: 70px;
+    background: $mainColor;
+
+    a {
+        padding: 5px 15px;
+        color: #fff;
+        transition: all ease 0.2s;
+
+        &:hover {
+            padding: 5px 20px;
+        }
+    }
+
+    @include respond($pc) {
+        display: block;
+    }
+
+    @include respond($tablet) {
+        display: none;
+    }
 }
 
 #h_menu {
@@ -586,6 +612,494 @@ body {
     }
 }
 
+
+// 예약하기 modal pop
+.reservBox {
+    position: fixed;
+    z-index: 99999;
+    background: $darkColor;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    color: $lightColor;
+    display: none;
+    z-index: 1000002;
+
+    &.on {
+        display: block;
+    }
+
+    .close {
+        position: absolute;
+        right: 17px;
+        top: 10px;
+        color: #fff;
+    }
+
+    @include respond($mobile) {
+        display: block;
+        padding: 40px 0 0;
+        bottom: 0;
+    }
+
+
+    .inner {
+        @include clearFix();
+
+        @include respond($mobile) {
+            height: 100vh;
+        }
+
+
+        .checkin,
+        .counter,
+        .point,
+        .search {
+            float: left;
+
+            @include clearFix();
+
+            div {
+                float: left;
+            }
+
+            input {
+                outline: none;
+                background: none;
+                border: 0px !important;
+
+                width: 100%;
+                cursor: pointer;
+                caret-color: transparent;
+                @include font($color:#fff, $l:2, $s:18px);
+            }
+        }
+
+        .checkin {
+            width: 25%;
+            padding: 0px 15px;
+            box-sizing: border-box;
+
+            @include respond($pc) {
+                width: 40%;
+            }
+
+            @include respond($mobile) {
+                width: 100%;
+                padding-bottom: 10px;
+            }
+
+            div {
+
+                width: 50%;
+
+                label {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    line-height: 2;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                input {
+                    line-height: 50px;
+
+                    @include respond($mobile) {
+                        line-height: 40px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        .counter {
+            border-left: 1px solid #333;
+            border-right: 1px solid #333;
+            padding: 0 10px;
+            box-sizing: border-box;
+            width: 40%;
+
+
+
+            #resetButton {
+                color: $midColor;
+                background: #333;
+                padding: 3px 6px;
+                display: block;
+                font-size: 13px;
+                margin: 0 auto;
+                width: 90%;
+                border-radius: 5px;
+
+                @include respond($mobile) {
+                    width: 100%;
+                }
+            }
+
+            div {
+                padding: 0 20px 5px;
+                box-sizing: border-box;
+                width: 33.3333%;
+                text-align: center;
+
+
+
+                p {
+                    font-size: 16px;
+                }
+
+                .countWrap {
+                    width: 100%;
+                    position: relative;
+
+                    button {
+                        position: absolute;
+
+
+                        color: $hColor;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        border-radius: 6px;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background: rgba(0, 0, 0, 0.1);
+
+
+
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.3);
+                        }
+
+                        &.minusBtn {
+                            left: 0;
+                        }
+
+                        &.plusBtn {
+                            right: 0;
+                        }
+
+                    }
+                }
+            }
+
+            @include respond($pc) {
+                width: 60%;
+                padding: 0 25px;
+                border-right: 0;
+            }
+
+            @include respond($tablet) {
+                padding: 0;
+
+                div {
+                    padding: 0 15px 5px;
+                }
+            }
+
+            @include respond($mobile) {
+                width: 100%;
+                border: 0;
+                padding: 20px 10px;
+                border-top: 1px solid #333;
+                border-bottom: 1px solid #333;
+            }
+
+        }
+
+        .point {
+            width: 25%;
+            padding: 0 20px;
+            box-sizing: border-box;
+
+            @include respond($pc) {
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            @include respond($tablet) {
+                width: 80%;
+            }
+
+            @include respond($mobile) {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            .selectBox {
+                position: relative;
+                width: 100%;
+
+                @include respond($pc) {
+                    width: 50%;
+                    float: left;
+                }
+
+                @include respond($mobile) {
+                    width: 100%;
+
+                }
+
+                #promotion {
+                    width: 100%;
+                    background: #232323;
+                    border: 0px;
+                    outline: 0px;
+                    color: #ccc;
+                    font-size: 16px;
+                    font-family: 'Arita';
+                    padding: 10px;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+
+                    &::-ms-expand {
+                        display: none;
+                    }
+
+
+
+
+
+                }
+
+                .select__arrow {
+                    position: absolute;
+                    top: 14px;
+                    right: 15px;
+                    width: 0;
+                    height: 0;
+                    pointer-events: none;
+                    border-style: solid;
+                    border-width: 7px 5px 0 5px;
+                    border-color: $basicColor transparent transparent transparent;
+                }
+            }
+
+
+            .useCheck {
+                width: 100%;
+                padding: 10px;
+
+                @include respond($pc) {
+                    width: 50%;
+                    float: left;
+                    box-sizing: border-box;
+                    padding-left: 20px;
+                }
+
+                @include respond($mobile) {
+                    width: 100%;
+
+                }
+
+                #usePoint {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                    vertical-align: text-bottom;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .search {
+            width: 10%;
+
+            a {
+                line-height: 93px;
+                height: 93px;
+                font-size: 35px;
+                color: $pointColor;
+                text-align: center;
+            }
+
+            @include respond($pc) {
+                position: absolute;
+                right: 50px;
+                bottom: -10px;
+                width: 160px;
+                box-sizing: border-box;
+
+                a {
+                    height: 55px;
+                    line-height: 55px;
+                    color: $darkColor;
+                    border-radius: 5px;
+                    background: $mainColor;
+                }
+            }
+
+            @include respond($tablet) {
+                right: 20px;
+            }
+
+            @include respond($mobile) {
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: fixed;
+
+                a {
+                    height: 45px;
+                    line-height: 45px;
+                    font-size: 25px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+// datepicker css custom
+#ui-datepicker-div {
+    display: none;
+    background: #eee;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    @include clearFix();
+
+    .ui-datepicker-group {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+
+        @include respond($mobile) {
+            width: 100%;
+
+            &.ui-datepicker-group-last {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #ccc;
+            }
+        }
+
+        .ui-datepicker-title {
+            text-align: center;
+            height: 40px;
+            box-sizing: border-box;
+            color: $mainColor;
+
+            @include respond($mobile) {
+                height: 35px;
+            }
+
+            .ui-datepicker-month {
+                border: 0;
+                padding: 5px;
+                box-sizing: border-box;
+                cursor: pointer;
+                @include font($s:16px);
+            }
+        }
+
+        .ui-datepicker-prev,
+        .ui-datepicker-next {
+            position: absolute;
+            background-color: #ccc;
+            box-sizing: border-box;
+            border-radius: 50%;
+            color: $basicColor;
+            text-indent: -999999px;
+            background-image: url(../images/bx_prev.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 35px;
+            height: 35px;
+            opacity: 0.8;
+            top: 15px;
+            left: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all ease 0.2s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            @include respond($mobile) {
+                top: 10px;
+            }
+        }
+
+        .ui-datepicker-next {
+            right: 25px;
+            left: unset;
+            transform: rotate(180deg);
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            border-spacing: 0;
+            padding: 0 15px;
+
+            .ui-state-disabled,
+            &.ui-widget-content .ui-state-disabled,
+            &.ui-widget-header .ui-state-disabled {
+                opacity: 0.5;
+                cursor: not-allowed !important;
+                pointer-events: none;
+                padding: 4px 0;
+                cursor: not-allowed !important;
+            }
+
+
+            th {
+                height: 25px;
+                background: rgb(163, 135, 107, 0.5);
+                @include font($color:#fff, $s:14px, $l:25px);
+            }
+
+            td {
+
+                transition: all ease 0.2s;
+
+                &:hover {
+                    background: #dedede;
+                }
+
+                &.ui-datepicker-today {
+                    background: #fff;
+                }
+
+                .ui-state-active {
+                    background: $mainColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @include respond($mobile) {
+        width: 100% !important;
+        box-sizing: border-box;
+        border-radius: 0;
+        left: 0 !important;
+    }
+}
+
+
 .page {
     height: auto;
     min-height: 900px;
@@ -624,7 +1138,7 @@ body {
         }
 
         >p {
-            @include font($color:$midColor,$s:18px);            
+            @include font($color:$midColor, $s:18px);
             margin-bottom: 30px;
             position: relative;
             padding-left: 155px;
@@ -713,6 +1227,7 @@ body {
             @include respond($pc) {
                 width: 60%;
             }
+
             @include respond($tablet) {
                 display: none;
             }
@@ -743,6 +1258,7 @@ body {
             margin-top: 40px;
 
             @include clearFix();
+
             @include respond($pc) {
                 width: 70%;
                 margin-left: 15%;
@@ -1038,6 +1554,7 @@ body {
                             display: none;
                         }
                     }
+
                     @include viewMore();
                 }
 
@@ -1308,7 +1825,7 @@ body {
             .s1 {
                 transform: scale(1);
                 opacity: 0.2;
-                
+
             }
         }
     }
@@ -1325,7 +1842,7 @@ body {
                     text-align: center;
                     width: 100%;
                     font-size: 55px;
-                    top:0;
+                    top: 0;
                 }
             }
 
@@ -2038,12 +2555,12 @@ body {
                     background: rgba(136, 112, 88, 0.2);
                 }
 
-                >a {                    
+                >a {
                     display: inline-block;
-                    height: 27px;                    
+                    height: 27px;
                     padding: 0px 8px;
                     transition: all ease 0.5s;
-                    @include font($color:$mainColor,$s:14px, $l:27px);
+                    @include font($color:$mainColor, $s:14px, $l:27px);
                 }
 
                 &.on {
@@ -2098,7 +2615,7 @@ body {
                         @include font($color:#fff, $s:15px, $l:215px);
                         display: block;
                         width: 100%;
-                        height: 100%;   
+                        height: 100%;
                         transition: all ease .5s;
                         background: $basicColor;
                         position: relative;
@@ -2575,7 +3092,7 @@ body {
                             width: 100%;
                             height: 100%;
 
-                            @include font($s:25px, $l:38px,$color:$lightColor);
+                            @include font($s:25px, $l:38px, $color:$lightColor);
                         }
                     }
                 }
@@ -2655,7 +3172,7 @@ body {
 
                 a {
                     @include font($color:$lightColor, $w:normal, $s:12px, $l:30px, $f:$default, $a:left);
-                    display: inline-block;                   
+                    display: inline-block;
                     transition: all ease 0.5s;
                     height: 18px;
                     padding-left: 20px;
@@ -2811,4 +3328,3 @@ body {
         }
     }
 }
-

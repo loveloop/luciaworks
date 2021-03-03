@@ -282,4 +282,35 @@ $(document).ready(function () {
             $(this).css("left", 0);
         });
     }
+
+    // 예약 객실수, 성인, 어린이 카운터
+    // $('.countVal').prop('disabled', true);
+    $(document).on('click', '.plusBtn', function () {
+        var countThis = $(this).closest(".countWrap").find(".countVal");
+        $(countThis).val(parseInt($(countThis).val()) + 1);
+    });
+    $(document).on('click', '.minusBtn', function () {
+        var countThis = $(this).closest(".countWrap").find(".countVal");
+        $(countThis).val(parseInt($(countThis).val()) - 1);
+        if ($(countThis).val() <= 0) {
+            $(countThis).val(0);
+        }
+    });
+    $(document).on('click', '#resetButton', function () {
+        $(".countVal").val(0);
+    });
+
+    //예약하기 박스
+    $(".ui-datepicker-div").hide();
+    $(".reservBox .close").on("click", function () {
+        $(".search").hide();
+        $(".reservBox").slideUp(500);
+        $(".ui-datepicker-div").hide();
+    });
+
+    $(".quickBtn>a, .booknow>a, .reservBtn").on("click", function () {
+        $(".reservBox").slideDown(500);
+        $(".search").show();
+    });
+
 });

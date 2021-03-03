@@ -39,6 +39,13 @@ p {
   line-height: 1.65;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .blind {
   display: block;
   position: absolute;
@@ -550,6 +557,33 @@ body .inner {
   }
 }
 
+.reservBtn {
+  display: none;
+  position: fixed;
+  right: 0;
+  z-index: 104;
+  top: 70px;
+  background: #887058;
+}
+.reservBtn a {
+  padding: 5px 15px;
+  color: #fff;
+  transition: all ease 0.2s;
+}
+.reservBtn a:hover {
+  padding: 5px 20px;
+}
+@media screen and (max-width: 1040px) {
+  .reservBtn {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reservBtn {
+    display: none;
+  }
+}
+
 #h_menu {
   display: none;
   width: 50px;
@@ -712,6 +746,470 @@ body .inner {
 }
 #mgnb .hamNav > ul > li:hover > ul li:hover a {
   opacity: 1;
+}
+
+.reservBox {
+  position: fixed;
+  z-index: 99999;
+  background: #292929;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  color: #888;
+  display: none;
+  z-index: 1000002;
+}
+.reservBox.on {
+  display: block;
+}
+.reservBox .close {
+  position: absolute;
+  right: 17px;
+  top: 10px;
+  color: #fff;
+}
+@media screen and (max-width: 640px) {
+  .reservBox {
+    display: block;
+    padding: 40px 0 0;
+    bottom: 0;
+  }
+}
+.reservBox .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner {
+    height: 100vh;
+  }
+}
+.reservBox .inner .checkin,
+.reservBox .inner .counter,
+.reservBox .inner .point,
+.reservBox .inner .search {
+  float: left;
+}
+.reservBox .inner .checkin::after,
+.reservBox .inner .counter::after,
+.reservBox .inner .point::after,
+.reservBox .inner .search::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.reservBox .inner .checkin div,
+.reservBox .inner .counter div,
+.reservBox .inner .point div,
+.reservBox .inner .search div {
+  float: left;
+}
+.reservBox .inner .checkin input,
+.reservBox .inner .counter input,
+.reservBox .inner .point input,
+.reservBox .inner .search input {
+  outline: none;
+  background: none;
+  border: 0px !important;
+  width: 100%;
+  cursor: pointer;
+  caret-color: transparent;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: "Arita";
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+}
+.reservBox .inner .checkin {
+  width: 25%;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .checkin {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .checkin {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+.reservBox .inner .checkin div {
+  width: 50%;
+}
+.reservBox .inner .checkin div label {
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 2;
+  font-size: 16px;
+  cursor: pointer;
+}
+.reservBox .inner .checkin div input {
+  line-height: 50px;
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .checkin div input {
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+.reservBox .inner .counter {
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 40%;
+}
+.reservBox .inner .counter #resetButton {
+  color: #777;
+  background: #333;
+  padding: 3px 6px;
+  display: block;
+  font-size: 13px;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 5px;
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .counter #resetButton {
+    width: 100%;
+  }
+}
+.reservBox .inner .counter div {
+  padding: 0 20px 5px;
+  box-sizing: border-box;
+  width: 33.3333%;
+  text-align: center;
+}
+.reservBox .inner .counter div p {
+  font-size: 16px;
+}
+.reservBox .inner .counter div .countWrap {
+  width: 100%;
+  position: relative;
+}
+.reservBox .inner .counter div .countWrap button {
+  position: absolute;
+  color: #ffc285;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.reservBox .inner .counter div .countWrap button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.reservBox .inner .counter div .countWrap button.minusBtn {
+  left: 0;
+}
+.reservBox .inner .counter div .countWrap button.plusBtn {
+  right: 0;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .counter {
+    width: 60%;
+    padding: 0 25px;
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reservBox .inner .counter {
+    padding: 0;
+  }
+  .reservBox .inner .counter div {
+    padding: 0 15px 5px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .counter {
+    width: 100%;
+    border: 0;
+    padding: 20px 10px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+}
+.reservBox .inner .point {
+  width: 25%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .point {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reservBox .inner .point {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .point {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+.reservBox .inner .point .selectBox {
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .point .selectBox {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .point .selectBox {
+    width: 100%;
+  }
+}
+.reservBox .inner .point .selectBox #promotion {
+  width: 100%;
+  background: #232323;
+  border: 0px;
+  outline: 0px;
+  color: #ccc;
+  font-size: 16px;
+  font-family: "Arita";
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.reservBox .inner .point .selectBox #promotion::-ms-expand {
+  display: none;
+}
+.reservBox .inner .point .selectBox .select__arrow {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #444 transparent transparent transparent;
+}
+.reservBox .inner .point .useCheck {
+  width: 100%;
+  padding: 10px;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .point .useCheck {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .point .useCheck {
+    width: 100%;
+  }
+}
+.reservBox .inner .point .useCheck #usePoint {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: text-bottom;
+}
+.reservBox .inner .point .useCheck label {
+  cursor: pointer;
+}
+.reservBox .inner .search {
+  width: 10%;
+}
+.reservBox .inner .search a {
+  line-height: 93px;
+  height: 93px;
+  font-size: 35px;
+  color: #a3876b;
+  text-align: center;
+}
+@media screen and (max-width: 1040px) {
+  .reservBox .inner .search {
+    position: absolute;
+    right: 50px;
+    bottom: -10px;
+    width: 160px;
+    box-sizing: border-box;
+  }
+  .reservBox .inner .search a {
+    height: 55px;
+    line-height: 55px;
+    color: #292929;
+    border-radius: 5px;
+    background: #887058;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reservBox .inner .search {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .reservBox .inner .search {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+  }
+  .reservBox .inner .search a {
+    height: 45px;
+    line-height: 45px;
+    font-size: 25px;
+    border-radius: 0;
+  }
+}
+
+#ui-datepicker-div {
+  display: none;
+  background: #eee;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+#ui-datepicker-div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#ui-datepicker-div .ui-datepicker-group {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 640px) {
+  #ui-datepicker-div .ui-datepicker-group {
+    width: 100%;
+  }
+  #ui-datepicker-div .ui-datepicker-group.ui-datepicker-group-last {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-title {
+  text-align: center;
+  height: 40px;
+  box-sizing: border-box;
+  color: #887058;
+}
+@media screen and (max-width: 640px) {
+  #ui-datepicker-div .ui-datepicker-group .ui-datepicker-title {
+    height: 35px;
+  }
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-title .ui-datepicker-month {
+  border: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: "Arita";
+  color: #333;
+  text-align: center;
+  line-height: 1.5;
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-prev,
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-next {
+  position: absolute;
+  background-color: #ccc;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #444;
+  text-indent: -999999px;
+  background-image: url(../images/bx_prev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
+  top: 15px;
+  left: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-prev:hover,
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-next:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 640px) {
+  #ui-datepicker-div .ui-datepicker-group .ui-datepicker-prev,
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-next {
+    top: 10px;
+  }
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-next {
+  right: 25px;
+  left: unset;
+  transform: rotate(180deg);
+}
+#ui-datepicker-div .ui-datepicker-group table {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  border-spacing: 0;
+  padding: 0 15px;
+}
+#ui-datepicker-div .ui-datepicker-group table .ui-state-disabled, #ui-datepicker-div .ui-datepicker-group table.ui-widget-content .ui-state-disabled, #ui-datepicker-div .ui-datepicker-group table.ui-widget-header .ui-state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  padding: 4px 0;
+  cursor: not-allowed !important;
+}
+#ui-datepicker-div .ui-datepicker-group table th {
+  height: 25px;
+  background: rgba(163, 135, 107, 0.5);
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Arita";
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+}
+#ui-datepicker-div .ui-datepicker-group table td {
+  transition: all ease 0.2s;
+}
+#ui-datepicker-div .ui-datepicker-group table td:hover {
+  background: #dedede;
+}
+#ui-datepicker-div .ui-datepicker-group table td.ui-datepicker-today {
+  background: #fff;
+}
+#ui-datepicker-div .ui-datepicker-group table td .ui-state-active {
+  background: #887058;
+  color: #fff;
+}
+@media screen and (max-width: 640px) {
+  #ui-datepicker-div {
+    width: 100% !important;
+    box-sizing: border-box;
+    border-radius: 0;
+    left: 0 !important;
+  }
 }
 
 .page {

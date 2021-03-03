@@ -37,6 +37,13 @@ p {
   line-height: 1.65;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .blind {
   display: block;
   position: absolute;
