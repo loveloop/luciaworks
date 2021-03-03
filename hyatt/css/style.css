@@ -772,7 +772,6 @@ body .inner {
 }
 @media screen and (max-width: 640px) {
   .reservBox {
-    display: block;
     padding: 40px 0 0;
     bottom: 0;
   }

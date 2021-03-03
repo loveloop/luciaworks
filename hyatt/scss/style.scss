@@ -639,7 +639,6 @@ body {
     }
 
     @include respond($mobile) {
-        display: block;
         padding: 40px 0 0;
         bottom: 0;
     }

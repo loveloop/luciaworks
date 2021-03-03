@@ -311,6 +311,11 @@ $(document).ready(function () {
     $(".quickBtn>a, .booknow>a, .reservBtn").on("click", function () {
         $(".reservBox").slideDown(500);
         $(".search").show();
+        $(".reservBox").on('scroll touchmove mousewheel', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
     });
 
 });
