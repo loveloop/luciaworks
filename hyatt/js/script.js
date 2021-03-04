@@ -1,7 +1,8 @@
 $(document).ready(function () {
     "use strict";
 
-    var $body = $("html, body"),
+    var $document = $(document),
+        $body = $("html, body"),
         $loading = $('#loading');
 
     //header 변수
@@ -110,18 +111,22 @@ $(document).ready(function () {
 
     //모바일버전 메뉴, 햄버거버튼
     //햄버거버튼 : 클릭 시 풀스크린 메뉴 나옴
-    $(".hamburger").on('click', function () {
+    var $hamburger = $(".hamburger"),
+        $hClass = "active";
+
+    $hamburger.on('click', function () {
         var $mgnb = $("#mgnb");
         $(this).toggleClass("is-active");
-        if (!$mgnb.hasClass('active')) {
-            $mgnb.fadeIn().toggleClass('active');
+        if (!$mgnb.hasClass($hClass)) {
+            $mgnb.fadeIn().toggleClass($hClass).parent('body').find($(".goTop")).hide();
             $mgnb.on('scroll touchmove mousewheel', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
             });
         } else {
-            $mgnb.fadeOut().removeClass('active');
+            $mgnb.fadeOut().removeClass($hClass).parent('body').find($(".goTop")).show();
+
             $mgnb.off('scroll touchmove mousewheel');
         }
     });
@@ -131,7 +136,6 @@ $(document).ready(function () {
         e.preventDefault();
 
         var i = $(this).parent('.front').parent('li').index();
-        console.log(i);
 
         $('#infoWrap>li').eq(i).addClass('on');
         $('#infoWrap>li').not('.on').addClass('off');
@@ -152,41 +156,57 @@ $(document).ready(function () {
     });
 
     //호텔소개 slider
-    var aNum = 0;
-    var count = $(".videoBanner>li").length;
-    var copyLi = $(".videoBanner>li:lt(2)").clone();
+    var aNum = 0,
+        $vBannerWrap = $(".videoBanner"),
+        $vBannerLi = $(".videoBanner>li"),
+        count = $(".videoBanner>li").length,
+        $copyLi = $(".videoBanner>li:lt(2)").clone(),
+        $circleBar = $(".circle>li"),
+        $vLeft = $(".leftBtn"),
+        $vRight = $(".rightBtn"),
+        $vClass = "active";
 
-    $(".videoBanner").append(copyLi);
+    $vBannerWrap.append($copyLi);
 
-    $(".rightBtn").on("click", function (e) {
+    $vRight.on("click", function (e) {
         e.preventDefault();
         moveRight();
     });
 
-    $(".leftBtn").on("click", function (e) {
+    $vLeft.on("click", function (e) {
         e.preventDefault();
         moveLeft();
     });
 
-    $(".circle>li").on("click", function (e) {
+    $circleBar.on("click", function (e) {
         e.preventDefault();
         aNum = $(this).index();
         moveBanner();
     });
 
+    function circleBar(value) {
+        $circleBar.eq(value).addClass($vClass).siblings().removeClass($vClass);
+    }
+
+    function bannerLi(value) {
+        $vBannerLi.eq(value).addClass($vClass).siblings().removeClass($vClass);
+    }
+
     function moveBanner() {
-        $(".videoBanner").stop().animate({
+        $vBannerWrap.stop().animate({
             "margin-left": -aNum * 100 + "%"
         }, 500);
-
-        $(".circle>li").eq(aNum).addClass("active").siblings().removeClass("active");
-        $(".videoBanner>li").eq(aNum).addClass("active").siblings().removeClass("active");
+        if (aNum === count) {
+            circleBar(0);
+        }
+        circleBar(aNum);
+        bannerLi(aNum);
     }
 
     function moveRight() {
         if (aNum === count) {
-            $(".videoBanner").css("margin-left", 0);
             aNum = 0;
+            $vBannerWrap.css("margin-left", 0);
         }
         aNum++;
         moveBanner();
@@ -194,7 +214,7 @@ $(document).ready(function () {
 
     function moveLeft() {
         if (aNum == 0) {
-            $(".videoBanner").css("margin-left", -100 * count + "%");
+            $vBannerWrap.css("margin-left", -100 * count + "%");
             aNum = count;
         }
         aNum--;
@@ -202,24 +222,28 @@ $(document).ready(function () {
     }
 
     //탭기능
+    var $tabInner = ".inner",
+        $tabS1 = ".s1",
+        $tabClass = "on";
+
     $('#tab>dl>dt>a').on('click, focusin', function (e) {
         e.preventDefault();
         var sNum = $(this).parent('dt').closest("dl").index();
-        $('#tab>dl>dt, #tab>dl>dd').removeClass('on');
-        $(this).parent('dt').addClass('on').next('dd').addClass('on');
+        $('#tab>dl>dt, #tab>dl>dd').removeClass($tabClass);
+        $(this).parent('dt').addClass($tabClass).next('dd').addClass($tabClass);
 
         switch (sNum) {
             case 0:
-                $(this).parents('.inner').find(".s1").text('Rooms & Suites');
+                $(this).parents($tabInner).find($tabS1).text('Rooms & Suites');
                 break;
             case 1:
-                $(this).parents('.inner').find(".s1").text('Dining & Bar');
+                $(this).parents($tabInner).find($tabS1).text('Dining & Bar');
                 break;
             case 2:
-                $(this).parents('.inner').find(".s1").text('Spaces & Wedding');
+                $(this).parents($tabInner).find($tabS1).text('Spaces & Wedding');
                 break;
             case 3:
-                $(this).parents('.inner').find(".s1").text('Special Offers');
+                $(this).parents($tabInner).find($tabS1).text('Special Offers');
                 break;
         }
 
@@ -285,33 +309,37 @@ $(document).ready(function () {
 
     // 예약 객실수, 성인, 어린이 카운터
     // $('.countVal').prop('disabled', true);
-    $(document).on('click', '.plusBtn', function () {
+    var $datepickerDiv = $(".ui-datepicker-div"),
+        $rSearch = $(".search"),
+        $reservBox = $(".reservBox");
+
+    $document.on('click', '.plusBtn', function () {
         var countThis = $(this).closest(".countWrap").find(".countVal");
         $(countThis).val(parseInt($(countThis).val()) + 1);
     });
-    $(document).on('click', '.minusBtn', function () {
+    $document.on('click', '.minusBtn', function () {
         var countThis = $(this).closest(".countWrap").find(".countVal");
         $(countThis).val(parseInt($(countThis).val()) - 1);
         if ($(countThis).val() <= 0) {
             $(countThis).val(0);
         }
     });
-    $(document).on('click', '#resetButton', function () {
+    $document.on('click', '#resetButton', function () {
         $(".countVal").val(0);
     });
 
     //예약하기 박스
-    $(".ui-datepicker-div").hide();
-    $(".reservBox .close").on("click", function () {
-        $(".search").hide();
-        $(".reservBox").slideUp(500).fadeOut("fast");
-        $(".ui-datepicker-div").hide();
+    $datepickerDiv.hide();
+    $reservBox.find(".close").on("click", function () {
+        $rSearch.hide();
+        $reservBox.slideUp(500).fadeOut("fast");
+        $datepickerDiv.hide();
     });
 
     $(".quickBtn>a, .booknow>a, .reservBtn").on("click", function () {
-        $(".reservBox").slideDown(500);
-        $(".search").show();
-        $(".reservBox").on('scroll touchmove mousewheel', function (e) {
+        $reservBox.slideDown(500);
+        $rSearch.show();
+        $reservBox.on('scroll touchmove mousewheel', function (e) {
             e.preventDefault();
             e.stopPropagation();
             return false;

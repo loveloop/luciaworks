@@ -294,7 +294,7 @@ $mobile-mini:360px;
         right: 0;
         bottom: 0;
         left: 0;
-        inset: 0 0 0 0;
+        // inset: 0 0 0 0;
         background: $pointColor;
         z-index: -1;
         transition: transform .3s ease;

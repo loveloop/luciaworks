@@ -766,9 +766,12 @@ body .inner {
 }
 .reservBox .close {
   position: absolute;
-  right: 17px;
-  top: 10px;
+  right: 0px;
+  top: 0px;
   color: #fff;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  z-index: 200;
 }
 @media screen and (max-width: 640px) {
   .reservBox {
@@ -1373,7 +1376,6 @@ body .inner {
   right: 0;
   bottom: 0;
   left: 0;
-  inset: 0 0 0 0;
   background: #a3876b;
   z-index: -1;
   transition: transform 0.3s ease;
@@ -3036,7 +3038,6 @@ body .inner {
   right: 0;
   bottom: 0;
   left: 0;
-  inset: 0 0 0 0;
   background: #a3876b;
   z-index: -1;
   transition: transform 0.3s ease;
@@ -3451,7 +3452,7 @@ body .inner {
   left: 0px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;
+  z-index: 104;
   opacity: 0.8;
   padding: 10px;
   width: auto;
