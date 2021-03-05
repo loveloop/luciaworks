@@ -3000,6 +3000,7 @@ body .inner {
 #location.on .world .inner h3 .s1 {
   mix-blend-mode: darken;
   opacity: 0.8;
+  -webkit-opacity: 0.8;
   color: #887058;
   font-size: 80px;
   position: relative;

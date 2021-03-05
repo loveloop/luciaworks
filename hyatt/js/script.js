@@ -227,9 +227,11 @@ $(document).ready(function () {
     //탭기능
     var $tabInner = ".inner",
         $tabS1 = ".s1",
+        $tabLi = $('#tab>dl>dt>a'),
         $tabClass = "on";
 
-    $('#tab>dl>dt>a').on('click, focusin', function (e) {
+        $tabLi.css('cursor','pointer !important');
+        $tabLi.on('click focusin touchstart', function (e) {
         e.preventDefault();
         var sNum = $(this).parent('dt').closest("dl").index();
         $('#tab>dl>dt, #tab>dl>dd').removeClass($tabClass);

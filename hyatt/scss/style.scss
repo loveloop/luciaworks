@@ -2710,6 +2710,7 @@ body {
                         // ios에서 적용 안됨
                         mix-blend-mode: darken;
                         opacity: 0.8;
+                        -webkit-opacity: 0.8;
                         color: $mainColor;
                         font-size: 80px;
                         position: relative;
