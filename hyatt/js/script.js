@@ -16,6 +16,9 @@ $(document).ready(function () {
 
     init();
 
+    var video = document.querySelector('video');
+    video.muted = true; 
+
     //초기 실행 이벤트
     function init() {
         loading();
