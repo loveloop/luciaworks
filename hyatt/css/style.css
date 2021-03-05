@@ -1243,7 +1243,7 @@ body .inner {
   position: absolute;
   top: -50px;
   left: 10px;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: darken;
   z-index: 100;
 }
 #container .inner h3 .s2 {
@@ -2998,7 +2998,7 @@ body .inner {
   }
 }
 #location.on .world .inner h3 .s1 {
-  mix-blend-mode: color-burn;
+  mix-blend-mode: darken;
   opacity: 0.8;
   color: #887058;
   font-size: 80px;

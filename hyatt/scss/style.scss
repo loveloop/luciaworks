@@ -1126,9 +1126,9 @@ body {
                 position: absolute;
                 top: -50px;
                 left: 10px;
-                mix-blend-mode: color-burn;
+                // mix-blend-mode: color-burn;
                 // ios에서 적용 안되는 에러
-                // mix-blend-mode: darken;
+                mix-blend-mode: darken;
                 z-index: 100;
             }
 
@@ -2706,9 +2706,9 @@ body {
             .inner {
                 h3 {
                     .s1 {
-                        mix-blend-mode: color-burn;
+                        // mix-blend-mode: color-burn;
                         // ios에서 적용 안됨
-                        // mix-blend-mode: darken;
+                        mix-blend-mode: darken;
                         opacity: 0.8;
                         color: $mainColor;
                         font-size: 80px;
