@@ -1175,9 +1175,11 @@ body {
         height: auto;
         opacity: 0.3;
         transform: scale(1.4);
+        -webkit-transform: scale(1.4);
 
         @include respond($mobile) {
             transform: scale(1);
+            -webkit-transform: scale(1);
         }
     }
 
@@ -1623,7 +1625,9 @@ body {
 
                 &.off:not(.on) {
                     opacity: 0;
+                    -webkit-opacity: 0;
                     transform: scale(0);
+                    -webkit-transform: scale(0);
                 }
 
                 &.on.on2 {
@@ -1828,6 +1832,7 @@ body {
         h3 {
             .s1 {
                 transform: scale(1);
+                -webkit-transform: scale(1);
                 opacity: 0.2;
                 -webkit-opacity: 0.2;
 
@@ -1839,6 +1844,7 @@ body {
         h3 {
             .s1 {
                 transform: scale(1.5);
+                -webkit-transform: scale(1.5);
                 opacity: 0.1;
                 -webkit-opacity: 0.1;
                 
@@ -2448,6 +2454,7 @@ body {
             h3 {
                 .s1 {
                     transform: scale(1);
+                    -webkit-transform: scale(1);
                     opacity: 0.2;
                     -webkit-opacity: 0.2;
 
@@ -2466,6 +2473,7 @@ body {
         h3 {
             .s1 {
                 transform: scale(1.5);
+                -webkit-transform: scale(1.5);
                 opacity: 0.1;
                 -webkit-opacity: 0.1;
                 transition: all ease 0.3s;
@@ -2666,6 +2674,7 @@ body {
                         &:hover {
                             &::before {
                                 transform: scale(1.2);
+                                -webkit-transform: scale(1.2);
                             }
 
                             &::after {
