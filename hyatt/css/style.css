@@ -2014,6 +2014,7 @@ body .inner {
 #about .inner h3 .s1 {
   transform: scale(1.5);
   opacity: 0.1;
+  visibility: visible;
   transition: all ease 0.3s;
   top: -40px;
 }
@@ -2742,6 +2743,7 @@ body .inner {
   transform: scale(1.5);
   opacity: 0.1;
   transition: all ease 0.3s;
+  visibility: visible;
 }
 @media screen and (max-width: 1040px) {
   #gallery .inner h3 .s1 {
@@ -3002,6 +3004,7 @@ body .inner {
   mix-blend-mode: darken;
   position: unset;
   opacity: 0.5;
+  visibility: visible;
   position: relative;
   padding: 10px;
   transition: color ease 0.2s;
