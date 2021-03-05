@@ -1827,6 +1827,7 @@ body {
             .s1 {
                 transform: scale(1);
                 opacity: 0.2;
+                -webkit-opacity: 0.2;
 
             }
         }
@@ -1837,6 +1838,8 @@ body {
             .s1 {
                 transform: scale(1.5);
                 opacity: 0.1;
+                -webkit-opacity: 0.1;
+                
                 //ios에서 opacity
                 visibility: visible;
                 transition: all ease 0.3s;
@@ -2444,6 +2447,7 @@ body {
                 .s1 {
                     transform: scale(1);
                     opacity: 0.2;
+                    -webkit-opacity: 0.2;
 
                 }
             }
@@ -2461,6 +2465,7 @@ body {
             .s1 {
                 transform: scale(1.5);
                 opacity: 0.1;
+                -webkit-opacity: 0.1;
                 transition: all ease 0.3s;
                 //ios에서 opacity
                 visibility: visible;
@@ -2716,6 +2721,7 @@ body {
                     mix-blend-mode: darken;
                     position: unset;
                     opacity: 0.5;
+                    -webkit-opacity: 0.5;
                     //ios에서 opacity
                     visibility: visible;
 
