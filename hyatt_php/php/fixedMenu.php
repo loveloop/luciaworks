@@ -1,6 +1,6 @@
 <aside class="footFix">
     <ul class="fixedMenu">
-        <li><a href="#void"><i class="b-icon b-icon-person"></i></a></li>
+        <li><a href="join.php"><i class="b-icon b-icon-person"></i></a></li>
         <li class="mapBtn"><a href="#void"><i class="b-icon b-icon-pin"></i></a></li>
         
         <li><a href="http://pf.kakao.com/_dymYV" target="_blank"><i class="b-icon b-icon-contact"></i></a>

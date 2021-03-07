@@ -2,7 +2,7 @@
 <div id="header" class="header">
     <div class="bgGnb"></div>
     <div class="inner">
-        <h1 class="logo"><a href="index.html"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
+        <h1 class="logo"><a href="index.php"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
         <ul class="user_area">
             <li><a href="https://world.hyatt.com/content/gp/ko/home.html" target="_blank">하얏트월드</a></li>
             <li><a href="#void"><i class="b-icon b-icon-search"></i><span class="blind">검색</span></a></li>
@@ -22,8 +22,8 @@
             </li>
             <li><a href="#void"><i class="b-icon b-icon-person"></i><span class="blind">마이페이지</span></a>
                 <ul class="userBox">
-                    <li><a href="join.html">로그인</a></li>
-                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="join.php">로그인</a></li>
+                    <li><a href="join.php">회원가입</a></li>
                     <li><a href="https://world.hyatt.com/content/gp/ko/tiers-and-benefits.html#charts" target="_blank">회원혜택</a></li>
                     <li><a href="https://world.hyatt.com/content/gp/ko/redeem.html" target="_blank">리워드</a></li>
                 </ul>
@@ -34,10 +34,10 @@
                 <li>
                     <a href="#void">HOTEL</a>
                     <ul>
-                        <li><a href="company.html">호텔소개</a></li>
+                        <li><a href="company.php">호텔소개</a></li>
                         <li><a href="#location">위치</a></li>
                         <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/area-attractions" target="_blank">주요명소</a></li>
-                        <li><a href="board.html">뉴스</a></li>
+                        <li><a href="board.php">뉴스</a></li>
                         <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/photos-reviews" target="_blank">갤러리&리뷰</a></li>
                     </ul>
                 </li>

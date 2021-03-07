@@ -1,0 +1,96 @@
+// footFix
+.footFix {
+    position: fixed;
+    z-index: 999999;
+    right: 0px;
+    bottom: 0px;
+    background: none;
+    transition: all ease 0.3s;
+    bottom: 42px;
+
+    @include respond($tablet) {
+        bottom: 0px;
+    }
+
+    .goTop {
+        text-align: center;
+        position: fixed;
+        width: 45px;
+        height: 40px;
+
+        @include respond($tablet) {
+            right: 10px;
+            bottom: 60px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    @include respond($tablet) {
+        left: 0;
+        width: 100%;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &:hover {
+            i {
+                color: $hColor;
+            }
+        }
+
+        i {
+            color: $pointColor;
+            font-size: 18px;
+            @include center();
+            transition: color ease 0.3s;
+        }
+    }
+}
+
+.fixedMenu {
+    padding: 10px 0 0;
+    background: none;
+
+    @include respond($tablet) {
+        @include clearFix();
+        padding: 0;
+        background: $darkColor;
+    }
+
+    li {
+        width: 45px;
+        height: 40px;
+
+        &.booknow {
+            display: none;
+
+            a {
+                @include font($color:#fff, $l:70px);
+                background-color: $mainColor;
+                line-height: 50px;
+
+                &:hover {
+                    background-color: $pointColor;
+                }
+            }
+        }
+
+        @include respond($tablet) {
+            float: left;
+            width: 20%;
+            height: 50px;
+
+            &.booknow {
+                display: block;
+            }
+        }
+    }
+}

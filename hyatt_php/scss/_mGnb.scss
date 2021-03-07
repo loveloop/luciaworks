@@ -1,0 +1,257 @@
+// mobile menu
+.mgnbLogo {
+    display: none;
+
+    @include respond($pc) {
+        display: block;
+        position: fixed;
+        left: 20px;
+        top: 10px;
+        z-index: 1000002;
+
+        a {
+            width: 90px;
+            height: 40px;
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include respond($tablet) {
+        a {
+            width: 80px;
+        }
+    }
+
+}
+
+.reservBtn {
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 104;
+    top: 70px;
+    background: $mainColor;
+
+    a {
+        padding: 5px 15px;
+        color: #fff;
+        transition: all ease 0.2s;
+
+        &:hover {
+            padding: 5px 20px;
+        }
+    }
+
+    @include respond($pc) {
+        display: block;
+    }
+
+    @include respond($tablet) {
+        display: none;
+    }
+}
+
+#h_menu {
+    display: none;
+    width: 50px;
+    height: 40px;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 201;
+
+    @include respond($pc) {
+        display: block;
+    }
+
+    .hamburger .line {
+        width: 25px;
+        height: 1px;
+        background-color: $pointColor;
+        display: block;
+        margin: 6px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+
+    /* ONE */
+    #hamburger-1.is-active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-1.is-active .line:nth-child(1) {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        -ms-transform: translateY(6px) rotate(45deg);
+        -o-transform: translateY(6px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    #hamburger-1.is-active .line:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        -ms-transform: translateY(-8px) rotate(-45deg);
+        -o-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+#mgnb {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $darkColor;
+    z-index: 200;
+
+    .user_area {
+        position: absolute;
+        right: 60px;
+        top: 17px;
+        z-index: 9999;
+        @include clearFix();
+
+        >li {
+            float: left;
+            margin-right: 10px;
+
+            @include respond($mobile-mini) {
+                &:first-child {
+                    display: none;
+                }
+            }
+
+            .langBox {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .hamNav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9998;
+        width: 100%;
+        text-align: center;
+
+        >ul {
+
+            >li {
+                list-style-type: none;
+                padding: 20px 0;
+                font-size: 20px;
+                text-transform: uppercase;
+                transition: all ease 0.2s;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    opacity: 0;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    background-size: cover;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &:nth-child(1)::after {
+                    background-image: url(../images/gallery-hotel5.jpg);
+                    background-position: top center;
+                }
+
+                &:nth-child(2)::after {
+                    background-image: url(../images/gallery-suites6.jpg);
+
+                }
+
+                &:nth-child(3)::after {
+                    background-image: url(../images/gallery-dining2.jpg);
+
+                }
+
+                &:nth-child(4)::after {
+                    background-image: url(../images/gallery-wedding1.jpg);
+
+                }
+
+                &:nth-child(5)::after {
+                    background-image: url(../images/gallery-activities4.jpg);
+                }
+
+                @include respond($tablet) {
+                    padding: 15px 0;
+                    font-size: 18px;
+                }
+
+                >a {
+                    color: $pointColor;
+                    position: relative;
+                    z-index: 1;
+                    transition: all ease 0.2s;
+                }
+
+                ul {
+                    display: none;
+                    position: relative;
+                    z-index: 1;
+
+                    li {
+                        a {
+                            color: #fff;
+                            opacity: 0.8;
+                            font-size: 20px;
+
+                            @include respond($tablet) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    height: 100%;
+
+                    &::after {
+                        opacity: 0.1;
+                    }
+
+                    >a {
+                        color: $hColor;
+                    }
+
+                    >ul {
+                        display: block;
+
+                        li {
+                            &:hover a {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

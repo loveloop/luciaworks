@@ -1,4 +1,4 @@
-<?php include "./include/header.php"; ?>
+<?php include "php/include/top.php"; ?>
 
 <div id="subWrap">
 <div id="subVisual">
@@ -98,6 +98,6 @@
 
 
 
-<?php include "include/footer.php"; ?>
+<?php include "php/include/bottom.php"; ?>
 
 

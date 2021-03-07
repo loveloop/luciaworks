@@ -1,0 +1,302 @@
+// 호텔소개 - #about
+#about {
+    padding: 150px 0 100px;
+    min-height: 700px;
+
+    @include respond($pc) {
+        padding: 150px 50px 100px 50px;
+    }
+
+    @include respond($tablet) {
+        padding: 150px 50px 100px 50px;
+    }
+
+    @include respond($mobile) {
+        padding: 80px 15px 15px;
+    }
+
+    @include respond($mobile-mini) {
+        padding: 60px 15px 30px;
+
+        .inner {
+            overflow: hidden;
+        }
+    }
+
+    &.on .inner {
+        h3 {
+            .s1 {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                opacity: 0.2;
+                -webkit-opacity: 0.2;
+
+            }
+        }
+    }
+
+    .inner {
+        h3 {
+            .s1 {
+                transform: scale(1.5);
+                -webkit-transform: scale(1.5);
+                opacity: 0.1;
+                -webkit-opacity: 0.1;
+
+                //ios에서 opacity
+                visibility: visible;
+                transition: all ease 0.3s;
+                top: -40px;
+
+                @include respond($mobile) {
+                    text-align: center;
+                    width: 100%;
+                    font-size: 55px;
+                    top: 0;
+                }
+            }
+
+            .s2 {
+                @include respond($mobile) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 20px;
+                    top: 20px;
+                }
+            }
+        }
+
+        >p {
+            padding-left: 200px;
+
+            @include respond($mobile) {
+                padding-left: 0px;
+                padding-top: 50px;
+                margin-bottom: 0px;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+
+    .btn_more {
+        @include moreBtn($w:110px);
+    }
+
+    .videoBox {
+        padding: 50px 0;
+    }
+
+    #videoWrap {
+        width: 640px;
+        height: 370px;
+        position: relative;
+        text-align: center;
+
+        @include respond($pc) {
+            margin: 0 auto;
+        }
+
+        @include respond($tablet) {
+            width: 100%;
+        }
+
+        .videoBanner {
+            width: 700%;
+
+            li {
+                float: left;
+                width: calc(100%/7);
+                transition: all ease 0.3s;
+
+                @include respond($tablet) {
+                    margin-top: 25px;
+
+                }
+
+                .photo {
+                    position: relative;
+                    padding: 40px;
+                    transition: all ease 0.3s;
+
+                    @include respond($tablet) {
+                        padding: 0;
+                        border-right: 10px solid #fff;
+                        overflow: hidden;
+                        height: 400px;
+
+                        img {
+                            @include center();
+                            width: 150%;
+                        }
+                    }
+
+                    @include respond($mobile) {
+                        height: 340px;
+
+                        img {
+                            width: 200%;
+                        }
+                    }
+
+                    @include respond($mobile-mini) {
+                        height: 400px;
+                        border: 0;
+
+                        img {
+                            width: 300%;
+                        }
+                    }
+
+                    img {
+                        position: relative;
+                        z-index: 100;
+                    }
+
+                    .textBox {
+                        position: absolute;
+                        z-index: 103;
+                        width: 400px;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        text-align: left;
+                        top: 257px;
+                        transition: all ease 0.3s;
+                        overflow: hidden;
+
+                        @include respond($pc) {
+                            top: 225px;
+                        }
+
+                        @include respond($tablet) {
+                            top: 0px;
+                            height: 100%;
+                            opacity: 1;
+                            width: 100%;
+                            background: rgba(0, 0, 0, 0.6);
+                        }
+
+                        .tit {
+                            font-size: 20px;
+                            color: #fff;
+                            background: rgba(5, 5, 5, 0.3);
+                            display: inline-block;
+                            padding: 5px 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        .sText {
+                            display: none;
+                            transition: all ease 0.3s;
+                            color: #fff;
+                            @include viewMore();
+
+                            @include respond($tablet) {
+                                display: block;
+                            }
+
+                            .info {
+                                color: #c4b2a1;
+                                display: block;
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    margin-top: 25px;
+
+                    .photo {
+                        padding: 0px;
+                    }
+                }
+
+                &.active:hover {
+                    .photo {
+                        .textBox {
+                            height: 360px;
+                            margin: 0;
+
+                            @include respond($tablet) {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .photo {
+                        .textBox {
+                            top: 0px;
+                            height: 315px;
+                            background: rgba(0, 0, 0, 0.8);
+                            margin: 40px 0;
+
+                            @include respond($tablet) {
+                                height: 100%;
+                                margin: 0px;
+                            }
+
+                            .sText {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .arrow {
+            li {
+                position: absolute;
+                top: -25px;
+                z-index: 101;
+
+                &.rightBtn {
+                    right: 5px;
+                }
+
+                &.leftBtn {
+                    right: 55px;
+                }
+
+                i {
+                    font-size: 30px;
+                    color: #909090;
+                }
+            }
+        }
+
+        .circle {
+            position: absolute;
+            top: -8px;
+            left: 0px;
+            z-index: 101;
+
+            li {
+                display: inline-block;
+                margin: -2px;
+
+                a {
+                    display: block;
+                    width: 40px;
+                    height: 3px;
+                    background: #dcdcdc;
+                    text-indent: -9999px;
+                    transition: all ease 0.3s;
+
+                    @include respond($mobile-mini) {
+                        width: 20px;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}

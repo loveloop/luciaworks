@@ -1,0 +1,28 @@
+// topBanner
+#topBanner {
+    position: relative;
+    width: 100%;
+    background: $basicColor;
+
+    @include respond($pc) {
+        display: none;
+    }
+
+    .inner {
+        a {
+            height: 40px;
+            @include font($color:#eee, $s:16px, $l:40px);
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        @include icon();
+    }
+}

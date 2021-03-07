@@ -1,6 +1,6 @@
 <!-- mobile menu -->
 <div class="mgnbLogo">
-    <h1 class="logo"><a href="index.html"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
+    <h1 class="logo"><a href="index.php"><img src="images/common/logo.svg" alt="하얏트 로고"></a></h1>
 </div>
 
 <div class="reservBtn">
@@ -39,11 +39,11 @@
             <li>
                 <a href="#void">HOTEL</a>
                 <ul>
-                        <li><a href="company.html">호텔소개</a></li>
-                        <li><a href="#location">위치</a></li>
-                        <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/area-attractions" target="_blank">주요명소</a></li>
-                        <li><a href="board.html">뉴스</a></li>
-                        <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/photos-reviews" target="_blank">갤러리&리뷰</a></li>
+                    <li><a href="company.php">호텔소개</a></li>
+                    <li><a href="#location">위치</a></li>
+                    <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/area-attractions" target="_blank">주요명소</a></li>
+                    <li><a href="board.php">뉴스</a></li>
+                    <li><a href="https://www.hyatt.com/ko-KR/hotel/south-korea/grand-hyatt-seoul/selrs/photos-reviews" target="_blank">갤러리&리뷰</a></li>
                 </ul>
             </li>
             <li>

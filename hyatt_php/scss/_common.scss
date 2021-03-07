@@ -1,0 +1,70 @@
+// 공통
+body {
+    font: {
+        family: $default;
+        size: 15px;
+    }
+
+    color:$basicColor;
+    letter-spacing: -0.04em;
+
+    .inner {
+        width: 1024px;
+        margin: 0px auto;
+        position: relative;
+        transition: all ease 0.3s;
+
+        @include respond($pc) {
+            width: 100%;
+        }
+    }
+
+    .page {
+        height: auto;
+        min-height: 900px;
+        overflow: hidden;
+
+        @include respond($mobile) {
+            min-height: 500px;
+        }
+    }
+
+    /* #container */
+    #container {
+        padding-top: 0px;
+
+        .inner {
+            h3 {
+                position: relative;
+
+                .s1 {
+                    @include font($s:95px, $color:$lightColor, $w:bold, $l:1);
+                    opacity: 0.3;
+                    position: absolute;
+                    top: -50px;
+                    left: 10px;
+                    // mix-blend-mode: color-burn;
+                    // ios에서 적용 안되는 에러
+                    mix-blend-mode: darken;
+                    z-index: 100;
+                }
+
+                .s2 {
+                    position: absolute;
+                    top: 0;
+                    left: 50px;
+                    font-size: 30px;
+                    transition: all ease 1s;
+                }
+            }
+
+            >p {
+                @include font($color:$midColor, $s:18px);
+                margin-bottom: 30px;
+                position: relative;
+                padding-left: 155px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

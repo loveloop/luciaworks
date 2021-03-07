@@ -1,0 +1,294 @@
+#location {
+    padding: 120px 0 0;
+    min-height: auto;
+
+    @include respond($pc) {
+        padding: 60px 0 0;
+    }
+
+    &.on {
+        .world {
+            .inner {
+                h3 {
+                    .s1 {
+                        // mix-blend-mode: color-burn;
+                        // ios에서 적용 안됨
+                        mix-blend-mode: darken;
+                        opacity: 0.8;
+                        -webkit-opacity: 0.8;
+                        color: $mainColor;
+                        font-size: 80px;
+                        position: relative;
+                        top: 0;
+
+                        @include respond($tablet) {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .world {
+        .inner {
+            h3 {
+                text-align: center;
+
+                .s1 {
+                    mix-blend-mode: darken;
+                    position: unset;
+                    opacity: 0.5;
+                    -webkit-opacity: 0.5;
+                    //ios에서 opacity
+                    visibility: visible;
+
+                    @include textHover();
+                    transition: all ease 0.3s;
+
+                    @include respond($pc) {
+                        font-size: 50px;
+                        width: 100%;
+                        position: relative;
+                        width: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        padding: 0;
+                        left: 0;
+                    }
+
+                }
+            }
+        }
+
+        #brand {
+            padding: 25px 0 70px;
+
+            @include respond($pc) {
+                padding: 0px;
+            }
+
+            .brandWrap {
+                position: relative;
+                width: 100%;
+                height: 150px;
+                overflow: hidden;
+
+                .brandLi {
+                    @include clearFix();
+                    position: absolute;
+                    left: 0;
+
+                    li {
+                        width: 150px;
+                        height: 150px;
+                        float: left;
+                        opacity: 0.8;
+                        transition: all ease 0.3s;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        // @for $i from 1 through 19{
+                        //     &:nth-child(#{$i}){
+                        //         background:url(../images/brandBnr#{$i}.jpg);
+                        //     }
+                        // }
+
+                        a {
+                            display: block;
+                            width: 90%;
+                            height: 90%;
+                            background: #fff;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            position: relative;
+                            margin: 10px;
+
+                            img {
+                                @include center;
+                                width: 50%;
+                                transition: all ease 0.3s;
+                            }
+
+                            &:hover {
+                                img {
+                                    width: 55%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .locaDetail {
+        background: $darkColor;
+        padding: 50px 0;
+        color: $lightColor;
+
+        @include respond($pc) {
+            padding: 50px 110px;
+        }
+
+        @include respond($mobile) {
+            padding: 0;
+        }
+
+        .inner {
+            h3 {
+                .s1 {
+                    mix-blend-mode: unset;
+                    opacity: 1;
+                    font-size: 25px;
+                    position: unset;
+                    font-weight: normal;
+                    color: $pointColor;
+                }
+            }
+
+            @include clearFix();
+
+            .left {
+                float: left;
+                width: 50%;
+                font-size: 17px;
+                box-sizing: border-box;
+
+                @include respond($pc) {
+                    float: none;
+                    width: 100%;
+                    font-size: 16px;
+                }
+
+                @include respond($mobile) {
+                    padding: 40px 30px 0px;
+                }
+
+                h4 {
+                    padding: 20px 0 10px;
+                    font-size: 18px;
+                    color: #fff;
+                }
+
+                strong {
+                    font-weight: normal;
+                    font-size: 18px;
+                    color: #fff;
+                    line-height: 1.6;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+
+                .contact {
+                    padding: 25px 0;
+
+                    p {
+                        color: $pointColor;
+                        font-size: 17px;
+
+                        @include respond ($pc) {
+                            display: inline-block;
+                            margin-right: 30px;
+                        }
+
+                        span {
+                            font-weight: bold;
+                            margin-right: 10px;
+                            color: $mainColor;
+                        }
+                    }
+
+                    a {
+                        color: $pointColor;
+                        display: inline-block;
+
+                        &:hover {
+                            color: $hColor;
+                        }
+                    }
+                }
+
+                .csBtn {
+                    a {
+                        color: $pointColor;
+                        display: inline-block;
+                        border: 1px solid $pointColor;
+                        padding: 3px 10px;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        transition: all ease 0.2s;
+
+                        &:hover {
+                            color: $hColor;
+                            border-color: $hColor;
+                        }
+                    }
+                }
+            }
+
+            /*google map*/
+            .right {
+                float: right;
+                width: 50%;
+                height: 300px;
+                box-sizing: border-box;
+
+                @include respond($pc) {
+                    float: none;
+                    width: 100%;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+
+
+                .googleMap {
+                    height: 300px;
+                    width: 100%;
+                    overflow: hidden;
+
+                    @include respond($pc) {
+                        height: 340px;
+                    }
+
+                    #map {
+                        width: 100vw;
+                        height: 100vh;
+
+                        .wrap {
+                            width: 200px;
+
+                            .text-box {
+                                text-align: center;
+
+                                h4 {
+                                    margin: 10px auto 0;
+                                }
+
+                                .img-box {
+                                    max-height: 100px;
+                                    overflow: hidden;
+                                }
+
+                                img {
+                                    width: 150px;
+                                    margin: -20px auto 0;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

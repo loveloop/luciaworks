@@ -1,0 +1,257 @@
+// 갤러리 - #gallery
+#gallery {
+    width: 100%;
+    padding: 170px 0px 110px;
+    height: auto;
+
+    @include respond($mobile) {
+        padding: 90px 0px 70px;
+    }
+
+    >* {
+        transition: all ease 1s;
+    }
+
+    &.on {
+        .inner {
+            h3 {
+                .s1 {
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                    opacity: 0.2;
+                    -webkit-opacity: 0.2;
+
+                }
+            }
+
+            p {
+                &:after {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    .inner {
+        h3 {
+            .s1 {
+                transform: scale(1.5);
+                -webkit-transform: scale(1.5);
+                opacity: 0.1;
+                -webkit-opacity: 0.1;
+                transition: all ease 0.3s;
+                //ios에서 opacity
+                visibility: visible;
+
+                @include respond($pc) {
+                    padding-left: 85px;
+                }
+
+                @include respond($mobile) {
+                    padding-left: 85px;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 55px;
+                    top: 0;
+                    padding: 0;
+                }
+            }
+
+            .s2 {
+                position: absolute;
+                top: 0;
+                left: 50px;
+                font-size: 30px;
+                transition: all ease 1s;
+
+                @include respond($pc) {
+                    padding-left: 85px;
+                }
+
+                @include respond($mobile) {
+                    padding-left: 85px;
+                    padding: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 20px;
+                    top: 20px;
+                }
+            }
+        }
+
+        >p {
+            @include respond($pc) {
+                padding-left: 245px;
+                padding-right: 50px;
+            }
+
+            @include respond($tablet) {
+                width: 100%;
+                padding: 40px 50px 0;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            @include respond($mobile) {
+                padding: 75px 50px 0;
+                text-align: center;
+            }
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: -17px;
+                left: 90px;
+                width: 0px;
+                height: 3px;
+                background: $mainColor;
+                transition: all ease 3s;
+
+                @include respond($tablet) {
+                    top: -17px;
+                    left: 90px;
+                }
+
+                @include respond($mobile) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        ul.tabs {
+            display: flex;
+            padding: 0 30px 5px;
+            box-sizing: border-box;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin-right: 10px;
+                margin-bottom: 10px;
+                border: 1px solid $mainColor;
+                border-radius: 50px;
+                background: #fff;
+                cursor: pointer;
+                transition: all ease 0.5s;
+
+                &:hover {
+                    background: rgba(136, 112, 88, 0.2);
+                }
+
+                >a {
+                    display: inline-block;
+                    height: 27px;
+                    padding: 0px 8px;
+                    transition: all ease 0.5s;
+                    @include font($color:$mainColor, $s:14px, $l:27px);
+                }
+
+                &.on {
+                    background: $mainColor;
+
+                    >a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .item_wrap {
+            height: 700px !important;
+            overflow: hidden;
+
+            @include respond($pc) {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .item {
+                width: (100%/3);
+                height: 235px;
+                float: left;
+                padding: 10px;
+                box-sizing: border-box;
+
+                @include respond($pc) {
+                    width: (100%/2);
+                }
+
+                @include respond($mobile) {
+                    width: 100%;
+                }
+
+                img {
+                    @include center();
+                    height: 115%;
+                    width: auto;
+                }
+
+                >div {
+                    width: 100%;
+                    height: 100%;
+                    background: #595959;
+                    color: rgba(0, 0, 0, 0);
+                    text-align: center;
+                    vertical-align: bottom;
+
+                    a {
+                        @include font($color:#fff, $s:15px, $l:215px);
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all ease .5s;
+                        background: $basicColor;
+                        position: relative;
+                        overflow: hidden;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            background-size: cover;
+                            background-position: center;
+                            transition: 1s;
+                        }
+
+                        &::after {
+                            content: 'VIEW';
+                            @include font($color:#c5ab9b, $w:bold, $s:20px, $l:215px, $f:$default);
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            background: rgba(0, 0, 0, 0.6);
+                            opacity: 0;
+                            transition: all .2s;
+                            box-sizing: border-box;
+                        }
+
+                        &:hover {
+                            &::before {
+                                transform: scale(1.2);
+                                -webkit-transform: scale(1.2);
+                            }
+
+                            &::after {
+                                opacity: 1;
+                                border: 5px solid #e0cec3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn_more {
+            @include moreBtn();
+        }
+    }
+}
