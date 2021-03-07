@@ -1,0 +1,326 @@
+/* 변수 */
+// color
+$mainColor:#887058;
+$pointColor:#a3876b;
+$hColor:#ffc285;
+$basicColor:#444;
+$midColor:#777;
+$lightColor:#888;
+$darkColor:#292929;
+$bg : #111;
+$border :#2f2f2f;
+
+// font
+$default:'Arita';
+$noto:'Noto Sans KR';
+
+/* 반응형 사이즈 */
+$pc:1040px;
+$tablet:767px;
+$mobile:640px;
+$mobile-mini:360px;
+
+/* mixin */
+// 반응형
+@mixin respond($media) {
+    @media screen and (max-width:$media) {
+        @content;
+    }
+}
+
+// clearfix
+@mixin clearFix() {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// 정중앙정렬
+@mixin center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// icon
+@mixin icon($color:#fff, $w:10px, $h:10px, $font:15px) {
+    i {
+        color: $color;
+        width: $w;
+        height: $h;
+        font-size: $font;
+    }
+}
+
+// font
+@mixin font($color:#333, $w:normal, $s:15px, $l:1.5, $f:$default, $a:center) {
+    font: {
+        weight: $w;
+        size: $s;
+        family: $f;
+    }
+    color:$color;
+    text-align: $a;
+    line-height: $l;
+}
+
+//line animation
+@mixin lineAni() {
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: $pointColor;
+        margin-top: 14px;
+        margin-bottom: 12px;
+        transition: 0.5s;
+    }
+}
+
+//text fade animation
+@mixin fadeText {
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+
+    .animatedFadeInUp {
+        opacity: 0
+    }
+
+    .fadeInUp {
+        opacity: 0;
+        animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+    }
+}
+
+@mixin animated($du:1s) {
+    animation-duration: $du;
+    animation-fill-mode: both;
+    -webkit-animation-duration: $du;
+    -webkit-animation-fill-mode: both
+}
+
+// footer banner
+@mixin clientBnr($x, $y, $hx:$x, $hy:$y) {
+    background-position: $x $y;
+    &:hover {
+        background-position-x: $hx;
+        background-position-y: $hy;
+    }
+}
+
+// button hover
+@mixin viewMore {
+    .more {
+        position: absolute;
+        bottom: 0px;
+        right: -60px;
+        color: $pointColor;
+        opacity: 0.6;
+        transition: 1s;
+
+        span {
+            font-size: 36px;
+            margin-right: 5px;
+            display: inline-block;
+            transition: 1s;
+        }
+
+        em {
+            font: normal 12px/1 'arial';
+            position: relative;
+            top: -3px;
+            opacity: 0;
+            transition: 1s;
+        }
+    }
+
+    &:hover {
+        .more {
+            right: 20px;
+
+            span {
+                transform: rotate(180deg);
+            }
+
+            em {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@mixin btnDraw {
+    .btnAni {
+        box-shadow: inset 0 0 0 2px rgba(136, 112, 88, 0.1);
+        background: none;
+        border: 0;
+        box-sizing: border-box;
+        padding: 0 15px;
+        position: relative;
+
+        &::before,
+        &::after {
+            box-sizing: inherit;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .btnAni {
+        transition: color 0.2s;
+
+        &::before,
+        &::after {
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover::before {
+            border-top-color: $pointColor;
+            border-right-color: $pointColor;
+            transition:
+                width 0.2s ease-out,
+                height 0.2s ease-out 0.25s;
+        }
+
+        &:hover::after,
+        &.on::after {
+            border-bottom-color: $pointColor;
+            border-left-color: $pointColor;
+            transition:
+                border-color 0s ease-out 0.5s,
+                width 0.2s ease-out 0.5s,
+                height 0.2s ease-out 0.75s; 
+        }
+    }
+}
+
+// btn_more
+@mixin moreBtn($w:110px) {
+    text-align: left;
+    margin: 0 auto;
+    width: $w;
+    line-height: 35px;
+    border: 1px solid $mainColor;
+    display: block;
+    color: $mainColor;
+    transition: all ease .2s;
+    background: url(../images/bt_arrow_gold.png) no-repeat 88% center;
+    padding-left: 20px;
+    margin-top: 40px;
+
+    &:hover {
+        background: url(../images/bt_arrow_gold.png) no-repeat 80% center;
+    }
+}
+
+//text hover animation
+@mixin textHover() {
+    position: relative;
+    padding: 10px;
+    transition: color ease 0.2s;
+    cursor: default;
+
+    span {
+        @include font($color:$pointColor, $w:normal, $s:18px);
+    }
+
+    &::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    &:hover {
+        color: #fff;
+
+        span {
+            color: $darkColor;
+        }
+
+        &::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // inset: 0 0 0 0;
+        background: $pointColor;
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+}
+
+//scroll
+@mixin scrollStyle($c:$darkColor) {
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: $c;
+      }
+      &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+      }
+
+      /* Firefox scrollbar */
+
+    scrollbar-width: thin;
+    scrollbar-color: $c transparent;
+
+}
